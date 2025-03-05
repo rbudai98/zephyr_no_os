@@ -11,8 +11,8 @@
 #include <zephyr/drivers/gpio.h>                                                                                                                                                     
 #include <zephyr/drivers/spi.h>
 
-#include "max31875.h"
-#include "zephyr_i2c.h"
+#include <max31875.h>
+#include <zephyr_i2c.h>
 
 
 int main(void)
@@ -47,11 +47,8 @@ int main(void)
 	no_os_i2c_ip.platform_ops = &zephyr_i2c_ops;
 	max31875_ip.i2c_init = no_os_i2c_ip;
 
-	max31875_desc_ptr->i2c_desc->platform_ops = &zephyr_i2c_ops;
-
 	ret = max31875_init(&max31875_desc_ptr, &max31875_ip);
 	printk("Max31875 init ret: %d\n", ret);
-
 
 	uint32_t configBuff = 0b0000001000010000;
 
