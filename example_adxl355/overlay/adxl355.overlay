@@ -1,0 +1,11 @@
+&spi1{
+        status = "okay";
+        clock-frequency = <1000000>;
+
+        adxl355:adxl355@0{
+                compatible = "adi,adxl355";
+                reg = <0>;
+                interrupts = <1 0>;
+                cs-gpios = < &gpiod 0xe 0x11 >;
+        };
+};
