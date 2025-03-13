@@ -1,0 +1,26 @@
+// Set up i2c2 for st board
+&pinctrl{
+        i2c2_scl_pf1: i2c2_scl_pf1 {
+                pinmux = <STM32_PINMUX('F', 1, AF4)>;
+                bias-pull-up;
+                drive-open-drain;
+        };
+        i2c2_sda_pf0: i2c2_sda_pf0 {
+                pinmux = <STM32_PINMUX('F', 0, AF4)>;
+                bias-pull-up;
+                drive-open-drain;
+        };
+};
+
+&i2c2{
+        status = "okay";
+        pinctrl-names = "default";
+        pinctrl-0 = <&i2c2_scl_pf1 &i2c2_sda_pf0>;
+};
+
+// Required for max31875 driver
+&i2c2{
+        max31875:max31875@0{
+                reg = <0x48>;
+        };
+};

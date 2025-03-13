@@ -28,11 +28,11 @@ int main(void)
 	struct max31875_dev* max31875_desc_ptr;
 
 	printk("Hello World! %s\n", CONFIG_BOARD_TARGET);
-	const struct device *TEST_DEVICE = DEVICE_DT_GET(DT_NODELABEL(i2c1));
+	const struct device *TEST_DEVICE = DEVICE_DT_GET(DT_PARENT(DT_NODELABEL(max31875)));
 	
 	struct i2c_dt_spec TEST_DEVICE_FULL;
 	TEST_DEVICE_FULL.bus = TEST_DEVICE;
-	TEST_DEVICE_FULL.addr = 0x48;
+	TEST_DEVICE_FULL.addr = DT_REG_ADDR(DT_NODELABEL(max31875));
 
 
 	if (!device_is_ready(TEST_DEVICE_FULL.bus)) {

@@ -5,6 +5,8 @@ cmake_minimum_required(VERSION 3.20.0)
 # Disable dynamic memory allocation in no-os
 add_definitions(-DNO_OS_DRIVER_DYNAMIC_ALLOC=1)
 
+set(DTC_OVERLAY_FILE "${CMAKE_CURRENT_SOURCE_DIR}/overlay/max31875.overlay")
+
 find_package(Zephyr REQUIRED HINTS $ENV{ZEPHYR_BASE})
 
 project(TEST_DRIVER)
