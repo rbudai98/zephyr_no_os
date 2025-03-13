@@ -32,7 +32,7 @@ int main(void)
 	printk("Hello World! %s\n", CONFIG_BOARD_TARGET);
 
 
-	const struct device *const spi_dev = DEVICE_DT_GET(DT_PARENT(DT_NODELABEL(adxl355)));
+	struct device *const spi_dev = DEVICE_DT_GET(DT_PARENT(DT_NODELABEL(adxl355)));
 	if (!device_is_ready(spi_dev)) {
 		printk("%s: device not ready.\n", spi_dev->name);
 		return 0;
