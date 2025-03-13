@@ -33,11 +33,11 @@ void thread1(void)
 
 	ret = no_os_gpio_get(&VCC_desc, &VCC_pin_no_os_ip);
 	if (ret)
-		return -1;
+		return;
 
 	ret = no_os_gpio_set_value(VCC_desc, NO_OS_GPIO_HIGH);
 	if (ret)
-		return -1;
+		return;
 
 
 	// const struct device *GPIO_VCC =  DEVICE_DT_GET(DT_NODELABEL(gpiof));
@@ -66,7 +66,7 @@ void thread1(void)
 
 	ret = no_os_gpio_get(&RED_desc, &RED_pin_no_os_ip);
 	if (ret)
-		return -1;
+		return;
 
 	struct zephyr_gpio_init_param GREEN_pin_zephyr_ip ={
 		.port = DEVICE_DT_GET(DT_NODELABEL(gpioe)),
@@ -82,7 +82,7 @@ void thread1(void)
 
 	ret = no_os_gpio_get(&GREEN_desc, &GREEN_pin_no_os_ip);
 	if (ret)
-		return -1;
+		return;
 
 	struct zephyr_gpio_init_param BLUE_pin_zephyr_ip ={
 		.port = DEVICE_DT_GET(DT_NODELABEL(gpiof)),
@@ -98,7 +98,7 @@ void thread1(void)
 
 	ret = no_os_gpio_get(&BLUE_desc, &BLUE_pin_no_os_ip);
 	if (ret)
-		return -1;
+		return;
 		
 
 	// const struct device *GPIO_RED =  DEVICE_DT_GET(DT_NODELABEL(gpioe));
@@ -171,7 +171,7 @@ void thread2(void)
 
 	ret = no_os_gpio_get(&X_AXIS_desc, &X_AXIS_pin_no_os_ip);
 	if (ret)
-		return -1;
+		return;
 
 	struct zephyr_gpio_init_param Y_AXIS_pin_zephyr_ip ={
 		.port = DEVICE_DT_GET(DT_NODELABEL(gpiof)),
@@ -187,7 +187,7 @@ void thread2(void)
 
 	ret = no_os_gpio_get(&Y_AXIS_desc, &Y_AXIS_pin_no_os_ip);
 	if (ret)
-		return -1;
+		return;
 	// const struct device *GPIO_X_AXIS =  DEVICE_DT_GET(DT_NODELABEL(gpiof));
 	// if (!device_is_ready(GPIO_X_AXIS)) {
 	// 	printf("Error: GPIO device %s is not ready\n", "GPIO_X_AXIS");
@@ -200,17 +200,17 @@ void thread2(void)
 	// 	return -1;
 	// }
 
-	volatile uint8_t val3;
-	volatile uint8_t val5;
+	uint8_t val3;
+	uint8_t val5;
 
 	while(true)
 	{
 		ret = no_os_gpio_get_value(X_AXIS_desc, &val3);
 		if (ret) 
-			return ret;
+			return;
 		ret = no_os_gpio_get_value(Y_AXIS_desc, &val5);
 		if (ret)
-			return ret;
+			return;
 		// val3 = gpio_pin_get(GPIO_X_AXIS, 3);
 		// if (val3 < 0) {
 		// 	printf("Error %d: failed to read pin 3\n", val3);
