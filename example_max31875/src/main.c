@@ -32,10 +32,16 @@ int main(void)
 	struct i2c_dt_spec TEST_DEVICE_FULL = I2C_DT_SPEC_GET(DT_NODELABEL(max31875));
 
 	printk("I2C device addr: %d\n", TEST_DEVICE_FULL.addr);
+
+	// zephyr IP
 	zephyr_i2c_ip.i2c_desc = &TEST_DEVICE_FULL;
-	no_os_i2c_ip.extra = (void *)&zephyr_i2c_ip;
-	no_os_i2c_ip.device_id = 1;
+
+	// no os IP
+	no_os_i2c_ip.extra = &zephyr_i2c_ip;
 	no_os_i2c_ip.platform_ops = &zephyr_i2c_ops;
+	no_os_i2c_ip.device_id = 1;
+
+	// max31875 ip
 	max31875_ip.i2c_init = no_os_i2c_ip;
 
 	ret = max31875_init(&max31875_desc_ptr, &max31875_ip);
