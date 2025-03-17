@@ -31,28 +31,13 @@ int main(void)
 
 	printk("Hello World! %s\n", CONFIG_BOARD_TARGET);
 
+	struct spi_dt_spec adxl355_spi_desc = SPI_DT_SPEC_GET(DT_NODELABEL(adxl355), SPI_OP_MODE_MASTER | SPI_WORD_SET(8), 0);
+	adxl355_spi_desc.config.frequency = adxl355_spi_desc.config.frequency;
+	adxl355_spi_desc.config.slave = 0;
 
-	struct device *const spi_dev = DEVICE_DT_GET(DT_PARENT(DT_NODELABEL(adxl355)));
-	if (!device_is_ready(spi_dev)) {
-		printk("%s: device not ready.\n", spi_dev->name);
-		return 0;
-	}
-
-	struct spi_cs_control cs_ctrl = (struct spi_cs_control){
-		.gpio = GPIO_DT_SPEC_GET(DT_PARENT(DT_NODELABEL(adxl355)), cs_gpios),
-		.delay = 0u,
-	};
-
-	struct spi_config spi_cfg = {
-		.frequency = DT_PROP(DT_PARENT(DT_NODELABEL(adxl355)), clock_frequency),
-		.operation = SPI_OP_MODE_MASTER | SPI_WORD_SET(8),
-		.slave = 0,
-		.cs = cs_ctrl,
-	};
-	
 	// zephyr IP
-	zephyr_spi_ip.bus = spi_dev;
-	zephyr_spi_ip.config = &spi_cfg;
+	zephyr_spi_ip.bus = adxl355_spi_desc.bus;
+	zephyr_spi_ip.config = &adxl355_spi_desc.config;
 	
 	// no os IP
 	no_os_spi_ip.extra = &zephyr_spi_ip;

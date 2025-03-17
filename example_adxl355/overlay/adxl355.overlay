@@ -1,8 +1,10 @@
 // Required for adxl355 driver
 &spi1{
-        clock-frequency = <1000000>;
         adxl355:adxl355@0{
-                compatible = "adi,adxl355";
+                compatible = "adi,adxl355_no_os_test";
+                spi-max-frequency = <1000000>;
+                frame-format = <0>;
+                duplex = <0>;
                 reg = <0>;
         };
 };
