@@ -21,6 +21,7 @@
 // Required for max31875 driver
 &i2c2{
         max31875:max31875@0{
+                compatible = "adi,max31875_no_os_test";
                 reg = <0x48>;
         };
 };
