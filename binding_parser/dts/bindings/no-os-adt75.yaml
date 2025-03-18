@@ -1,0 +1,9 @@
+# Copyright (c) 2025 Analog Devices Inc.
+
+description: No-os binding for adt75 device
+
+compatible: "adi,no-os-adt75"
+
+include: [i2c-device.yaml]
+
+properties:

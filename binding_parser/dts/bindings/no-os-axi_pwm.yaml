@@ -1,0 +1,14 @@
+# Copyright (c) 2025 Analog Devices Inc.
+
+description: No-os binding for axi_pwm device
+
+compatible: "adi,no-os-axi_pwm"
+
+
+properties:
+  base_addr:
+    type: uint32_t
+  ref_clock_Hz:
+    type: uint32_t
+  channel:
+    type: uint32_t

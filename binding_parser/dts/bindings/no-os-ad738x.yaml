@@ -1,0 +1,23 @@
+# Copyright (c) 2025 Analog Devices Inc.
+
+description: No-os binding for ad738x device
+
+compatible: "adi,no-os-ad738x"
+
+include: [spi-device.yaml]
+
+properties:
+  conv_mode:
+    type: int
+    enum:
+      - TWO_WIRE_MODE
+      - ONE_WIRE_MODE
+  ref_sel:
+    type: int
+    enum:
+      - INT_REF
+      - EXT_REF
+  ref_voltage_mv:
+    type: uint32_t
+  flags:
+    type: uint32_t

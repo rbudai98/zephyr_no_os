@@ -1,0 +1,19 @@
+# Copyright (c) 2025 Analog Devices Inc.
+
+description: No-os binding for ltp8800 device
+
+compatible: "adi,no-os-ltp8800"
+
+include: [i2c-device.yaml, gpio-controller.yaml]
+
+properties:
+  write_protect_en:
+    type: bool
+  external_clk_en:
+    type: bool
+  sync_en:
+    type: bool
+  crc_en:
+    type: bool
+  polyphase_order:
+    type: uint8_t

@@ -1,0 +1,9 @@
+# Copyright (c) 2025 Analog Devices Inc.
+
+description: No-os binding for ltc4306 device
+
+compatible: "adi,no-os-ltc4306"
+
+include: [i2c-device.yaml]
+
+properties:

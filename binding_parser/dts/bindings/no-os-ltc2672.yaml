@@ -1,0 +1,14 @@
+# Copyright (c) 2025 Analog Devices Inc.
+
+description: No-os binding for ltc2672 device
+
+compatible: "adi,no-os-ltc2672"
+
+include: [spi-device.yaml]
+
+properties:
+  id:
+    type: int
+    enum:
+      - LTC2672_12
+      - LTC2672_16

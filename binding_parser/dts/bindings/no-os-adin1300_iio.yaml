@@ -1,0 +1,8 @@
+# Copyright (c) 2025 Analog Devices Inc.
+
+description: No-os binding for adin1300_iio device
+
+compatible: "adi,no-os-adin1300_iio"
+
+
+properties:

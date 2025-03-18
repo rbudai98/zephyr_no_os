@@ -1,0 +1,29 @@
+# Copyright (c) 2025 Analog Devices Inc.
+
+description: No-os binding for ad5592r device
+
+compatible: "adi,no-os-ad5592r"
+
+include: [spi-device.yaml, i2c-device.yaml]
+
+properties:
+  int_ref:
+    type: bool
+  channel_modes[8]:
+    type: uint8_t
+  channel_offstate[8]:
+    type: uint8_t
+  adc_range:
+    type: int
+    enum:
+      - ZERO_TO_VREF
+      - ZERO_TO_2VREF
+  dac_range:
+    type: int
+    enum:
+      - ZERO_TO_VREF
+      - ZERO_TO_2VREF
+  adc_buf:
+    type: bool
+  power_down[8]:
+    type: uint8_t

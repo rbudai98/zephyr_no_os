@@ -1,0 +1,8 @@
+# Copyright (c) 2025 Analog Devices Inc.
+
+description: No-os binding for ltc4162l_iio device
+
+compatible: "adi,no-os-ltc4162l_iio"
+
+
+properties:

@@ -1,0 +1,9 @@
+# Copyright (c) 2025 Analog Devices Inc.
+
+description: No-os binding for ltc3350 device
+
+compatible: "adi,no-os-ltc3350"
+
+include: [i2c-device.yaml]
+
+properties:

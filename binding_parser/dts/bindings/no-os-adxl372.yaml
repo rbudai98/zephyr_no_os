@@ -1,0 +1,68 @@
+# Copyright (c) 2025 Analog Devices Inc.
+
+description: No-os binding for adxl372 device
+
+compatible: "adi,no-os-adxl372"
+
+include: [spi-device.yaml, i2c-device.yaml, gpio-controller.yaml]
+
+properties:
+  bw:
+    type: int
+    enum:
+      - ADXL372_BW_200HZ
+      - ADXL372_BW_400HZ
+      - ADXL372_BW_800HZ
+      - ADXL372_BW_1600HZ
+      - ADXL372_BW_3200HZ
+  odr:
+    type: int
+    enum:
+      - ADXL372_ODR_400HZ
+      - ADXL372_ODR_800HZ
+      - ADXL372_ODR_1600HZ
+      - ADXL372_ODR_3200HZ
+      - ADXL372_ODR_6400HZ
+  wur:
+    type: int
+    enum:
+      - ADXL372_WUR_52ms
+      - ADXL372_WUR_104ms
+      - ADXL372_WUR_208ms
+      - ADXL372_WUR_512ms
+      - ADXL372_WUR_2048ms
+      - ADXL372_WUR_4096ms
+      - ADXL372_WUR_8192ms
+      - ADXL372_WUR_24576ms
+  act_proc_mode:
+    type: int
+    enum:
+      - ADXL372_DEFAULT
+      - ADXL372_LINKED
+      - ADXL372_LOOPED
+  th_mode:
+    type: int
+    enum:
+      - ADXL372_INSTANT_ON_LOW_TH
+      - ADXL372_INSTANT_ON_HIGH_TH
+  activity_time:
+    type: uint8_t
+  inactivity_time:
+    type: uint16_t
+  filter_settle:
+    type: int
+    enum:
+      - ADXL372_FILTER_SETTLE_370
+      - ADXL372_FILTER_SETTLE_16
+  op_mode:
+    type: int
+    enum:
+      - ADXL372_STANDBY
+      - ADXL372_WAKE_UP
+      - ADXL372_INSTANT_ON
+      - ADXL372_FULL_BW_MEASUREMENT
+  comm_type:
+    type: int
+    enum:
+      - SPI
+      - I2C

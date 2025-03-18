@@ -1,0 +1,14 @@
+# Copyright (c) 2025 Analog Devices Inc.
+
+description: No-os binding for adp1055_iio_desc device
+
+compatible: "adi,no-os-adp1055_iio_desc"
+
+
+properties:
+  vout_scale_monitor:
+    type: uint16_t
+  vin_scale_monitor:
+    type: uint16_t
+  iin_scale_monitor:
+    type: uint16_t

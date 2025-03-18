@@ -1,0 +1,9 @@
+# Copyright (c) 2025 Analog Devices Inc.
+
+description: No-os binding for mdio_bitbang device
+
+compatible: "adi,no-os-mdio_bitbang"
+
+include: [gpio-controller.yaml]
+
+properties:

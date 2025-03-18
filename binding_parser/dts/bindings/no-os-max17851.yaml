@@ -1,0 +1,54 @@
+# Copyright (c) 2025 Analog Devices Inc.
+
+description: No-os binding for max17851 device
+
+compatible: "adi,no-os-max17851"
+
+include: [spi-device.yaml, gpio-controller.yaml]
+
+properties:
+  comm_to_delay:
+    type: int
+    enum:
+      - MAX17851_TIMEOUT_DELAY_276BITS
+      - MAX17851_TIMEOUT_DELAY_516BITS
+      - MAX17851_TIMEOUT_DELAY_996BITS
+      - MAX17851_TIMEOUT_DELAY_1956BITS
+      - MAX17851_TIMEOUT_DELAY_DISABLED
+  safemon_dly:
+    type: int
+    enum:
+      - MAX17851_SAFEMON_DLY_500MS
+      - MAX17851_SAFEMON_DLY_1000MS
+      - MAX17851_SAFEMON_DLY_1500MS
+  op_mode:
+    type: int
+    enum:
+      - MAX17851_SLAVE_DUAL_UART
+      - MAX17851_MASTER_SINGLE_UART 
+      - MAX17851_MASTER_DUAL_UART
+  dbnc:
+    type: int
+    enum:
+      - MAX17851_ALERTPCKT_DBNC_1
+      - MAX17851_ALERTPCKT_DBNC_2
+      - MAX17851_ALERTPCKT_DBNC_4
+      - MAX17851_ALERTPCKT_DBNC_8
+      - MAX17851_ALERTPCKT_DBNC_16
+      - MAX17851_ALERTPCKT_DBNC_32
+      - MAX17851_ALERTPCKT_DBNC_64
+      - MAX17851_ALERTPCKT_DBNC_128
+  baud_rate:
+    type: int
+    enum:
+      - MAX17851_UART_BAUD_500K 
+      - MAX17851_UART_BAUD_1M
+      - MAX17851_UART_BAUD_2M
+  contact_tmr_dly_4xmin:
+    type: uint8_t
+  gpio_rec_dly_csec:
+    type: uint8_t
+  no_dev:
+    type: uint8_t
+  single:
+    type: bool

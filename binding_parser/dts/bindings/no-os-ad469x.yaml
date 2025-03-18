@@ -1,0 +1,57 @@
+# Copyright (c) 2025 Analog Devices Inc.
+
+description: No-os binding for ad469x device
+
+compatible: "adi,no-os-ad469x"
+
+include: [spi-device.yaml, gpio-controller.yaml]
+
+properties:
+  axi_clkgen_rate:
+    type: uint32_t
+  reg_access_speed:
+    type: uint32_t
+  reg_data_width:
+    type: uint8_t
+  capture_data_width:
+    type: uint8_t
+  dev_id:
+    type: int
+    enum:
+      - ID_AD4695
+      - ID_AD4696
+      - ID_AD4697
+      - ID_AD4698
+  std_seq_pin_pairing:
+    type: int
+    enum:
+      - AD469x_INx_REF_GND
+      - AD469x_INx_COM
+      - AD469x_INx_EVEN_ODD
+  ch_sequence:
+    type: int
+    enum:
+      - AD469x_single_cycle
+      - AD469x_two_cycle
+      - AD469x_standard_seq
+      - AD469x_advanced_seq
+  std_seq_osr:
+    type: int
+    enum:
+      - AD469x_OSR_1
+      - AD469x_OSR_4
+      - AD469x_OSR_16
+      - AD469x_OSR_64
+  adv_seq_osr_resol[AD469x_CHANNEL_NO]:
+    type: int
+    enum:
+      - AD469x_OSR_1
+      - AD469x_OSR_4
+      - AD469x_OSR_16
+      - AD469x_OSR_64
+  num_data_ch:
+    type: uint8_t
+  temp_enabled:
+    type: bool
+  enable_extended_init:
+    type: bool

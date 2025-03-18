@@ -1,0 +1,9 @@
+# Copyright (c) 2025 Analog Devices Inc.
+
+description: No-os binding for ltc7841 device
+
+compatible: "adi,no-os-ltc7841"
+
+include: [i2c-device.yaml]
+
+properties:

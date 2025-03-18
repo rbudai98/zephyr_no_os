@@ -1,0 +1,9 @@
+# Copyright (c) 2025 Analog Devices Inc.
+
+description: No-os binding for ade7754 device
+
+compatible: "adi,no-os-ade7754"
+
+include: [spi-device.yaml, gpio-controller.yaml]
+
+properties:

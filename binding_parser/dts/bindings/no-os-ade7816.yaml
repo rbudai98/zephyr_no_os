@@ -1,0 +1,25 @@
+# Copyright (c) 2025 Analog Devices Inc.
+
+description: No-os binding for ade7816 device
+
+compatible: "adi,no-os-ade7816"
+
+include: [spi-device.yaml, i2c-device.yaml, gpio-controller.yaml]
+
+properties:
+  active_irq:
+    type: int
+    enum:
+      - ADE7816_NO_IRQ
+      - ADE7816_IRQ0
+      - ADE7816_IRQ1
+      - ADE7816_IRQ0_IRQ1
+  comm_type:
+    type: int
+    enum:
+      - ADE7816_I2C
+      - ADE7816_SPI
+  irq0_priority:
+    type: uint32_t
+  irq1_priority:
+    type: uint32_t

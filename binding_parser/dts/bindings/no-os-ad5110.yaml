@@ -1,0 +1,11 @@
+# Copyright (c) 2025 Analog Devices Inc.
+
+description: No-os binding for ad5110 device
+
+compatible: "adi,no-os-ad5110"
+
+include: [i2c-device.yaml]
+
+properties:
+  ad5110_dev_addr:
+    type: uint8_t

@@ -1,0 +1,17 @@
+# Copyright (c) 2025 Analog Devices Inc.
+
+description: No-os binding for ad9680 device
+
+compatible: "adi,no-os-ad9680"
+
+include: [spi-device.yaml]
+
+properties:
+  lane_rate_kbps:
+    type: uint32_t
+  sampling_frequency_hz:
+    type: unsigned long long
+  dcm:
+    type: unsigned long
+  sysref_mode:
+    type: unsigned long

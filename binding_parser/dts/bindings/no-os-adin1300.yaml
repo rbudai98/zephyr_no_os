@@ -1,0 +1,32 @@
+# Copyright (c) 2025 Analog Devices Inc.
+
+description: No-os binding for adin1300 device
+
+compatible: "adi,no-os-adin1300"
+
+include: [gpio-controller.yaml]
+
+properties:
+  gp_clk:
+    type: bool
+  gp_clk_source:
+    type: int
+    enum:
+      - ADIN1300_GP_CLK_REFERENCE
+      - ADIN1300_GP_CLK_HEARTBEAT_FREE
+      - ADIN1300_GP_CLK_HEARTBEAT_RECOVERED
+      - ADIN1300_GP_CLK_FREE 
+      - ADIN1300_GP_CLK_RECOVERED
+  clk25_ref:
+    type: bool
+  speed_cap:
+    type: int
+    enum:
+      - ADIN1300_10_BASE_T_HALFDUPLEX
+      - ADIN1300_10_BASE_T_FULLDUPLEX
+      - ADIN1300_100_BASE_TX_HALFDUPLEX
+      - ADIN1300_100_BASE_TX_FULLDUPLEX
+      - ADIN1300_1000_BASE_T_HALFDUPLEX
+      - ADIN1300_1000_BASE_T_FULLDUPLEX
+  autoneg:
+    type: bool

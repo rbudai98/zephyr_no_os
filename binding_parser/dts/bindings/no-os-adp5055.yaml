@@ -1,0 +1,9 @@
+# Copyright (c) 2025 Analog Devices Inc.
+
+description: No-os binding for adp5055 device
+
+compatible: "adi,no-os-adp5055"
+
+include: [i2c-device.yaml]
+
+properties:

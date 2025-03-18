@@ -1,0 +1,55 @@
+# Copyright (c) 2025 Analog Devices Inc.
+
+description: No-os binding for ad5754r device
+
+compatible: "adi,no-os-ad5754r"
+
+include: [spi-device.yaml, gpio-controller.yaml]
+
+properties:
+  dac_ch_range[AD5754R_NUM_CHANNELS]:
+    type: int
+    enum:
+      - AD5754R_SPAN_0V_TO_5V
+      - AD5754R_SPAN_0V_TO_10V
+      - AD5754R_SPAN_0V_TO_10V8
+      - AD5754R_SPAN_M5V_TO_5V
+      - AD5754R_SPAN_M10V_TO_10V
+      - AD5754R_SPAN_M10V8_TO_10V8
+  clamp_en:
+    type: int
+    enum:
+      - AD5754R_CTRL_CLAMP_DIS
+      - AD5754R_CTRL_CLAMP_EN
+  tsd_en:
+    type: int
+    enum:
+      - AD5754R_CTRL_TSD_DIS
+      - AD5754R_CTRL_TSD_EN
+  clear_sel:
+    type: int
+    enum:
+      - AD5754R_CTRL_CLEAR_0V
+      - AD5754R_CTRL_CLEAR_MIDSCALE_CODE
+  sdo_dis:
+    type: int
+    enum:
+      - AD5754R_CTRL_SDO_EN
+      - AD5754R_CTRL_SDO_DIS
+  dac_ch_pwr_states[AD5754R_NUM_CHANNELS]:
+    type: int
+    enum:
+      - AD5754R_PWR_DAC_CH_POWERDOWN
+      - AD5754R_PWR_DAC_CH_POWERUP
+  int_ref_pwrup:
+    type: int
+    enum:
+      - AD5754R_PWR_INT_REF_POWERDOWN
+      - AD5754R_PWR_INT_REF_POWERUP
+  encoding:
+    type: int
+    enum:
+      - AD5754R_ENCODING_TWOSCOMPLEMENT
+      - AD5754R_ENCODING_BINARY
+  vref_mv:
+    type: uint16_t

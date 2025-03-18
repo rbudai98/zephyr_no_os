@@ -1,0 +1,19 @@
+# Copyright (c) 2025 Analog Devices Inc.
+
+description: No-os binding for ad4170 device
+
+compatible: "adi,no-os-ad4170"
+
+include: [spi-device.yaml, gpio-controller.yaml]
+
+properties:
+  id:
+    type: int
+    enum:
+      - ID_AD4170
+      - ID_AD4171
+      - ID_AD4172
+      - ID_AD4190
+      - ID_AD4195
+  rdy_conv_timeout:
+    type: uint32_t

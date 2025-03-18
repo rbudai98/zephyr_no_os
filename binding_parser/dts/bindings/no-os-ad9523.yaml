@@ -1,0 +1,9 @@
+# Copyright (c) 2025 Analog Devices Inc.
+
+description: No-os binding for ad9523 device
+
+compatible: "adi,no-os-ad9523"
+
+include: [spi-device.yaml]
+
+properties:

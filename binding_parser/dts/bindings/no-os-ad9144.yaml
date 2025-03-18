@@ -1,0 +1,39 @@
+# Copyright (c) 2025 Analog Devices Inc.
+
+description: No-os binding for ad9144 device
+
+compatible: "adi,no-os-ad9144"
+
+include: [spi-device.yaml]
+
+properties:
+  spi3wire:
+    type: uint8_t
+  num_converters:
+    type: uint8_t
+  num_lanes:
+    type: uint8_t
+  interpolation:
+    type: uint8_t
+  fcenter_shift:
+    type: unsigned int
+  stpl_samples[4][4]:
+    type: uint32_t
+  lane_rate_kbps:
+    type: uint32_t
+  prbs_type:
+    type: uint32_t
+  jesd204_mode:
+    type: uint8_t
+  jesd204_subclass:
+    type: uint8_t
+  jesd204_scrambling:
+    type: uint8_t
+  lane_mux[8]:
+    type: uint8_t
+  pll_enable:
+    type: uint8_t
+  pll_ref_frequency_khz:
+    type: uint32_t
+  pll_dac_frequency_khz:
+    type: uint32_t

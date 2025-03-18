@@ -1,0 +1,18 @@
+# Copyright (c) 2025 Analog Devices Inc.
+
+description: No-os binding for adin1110 device
+
+compatible: "adi,no-os-adin1110"
+
+include: [spi-device.yaml, gpio-controller.yaml]
+
+properties:
+  chip_type:
+    type: int
+    enum:
+      - ADIN1110
+      - ADIN2111
+  mac_address[ADIN1110_ETH_ALEN]:
+    type: uint8_t
+  append_crc:
+    type: bool

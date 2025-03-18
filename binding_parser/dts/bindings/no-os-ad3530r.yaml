@@ -1,0 +1,66 @@
+# Copyright (c) 2025 Analog Devices Inc.
+
+description: No-os binding for ad3530r device
+
+compatible: "adi,no-os-ad3530r"
+
+include: [spi-device.yaml, gpio-controller.yaml]
+
+properties:
+  chip_id:
+    type: int
+    enum:
+      - AD3530R_ID
+  vref_enable:
+    type: int
+    enum:
+      - AD3530R_EXTERNAL_VREF_PIN_INPUT
+      - AD3530R_INTERNAL_VREF_PIN_2P5V
+  chn_op_mode[AD3530R_NUM_CH]:
+    type: int
+    enum:
+      - AD3530R_CH_OPERATING_MODE_0
+      - AD3530R_CH_OPERATING_MODE_1
+      - AD3530R_CH_OPERATING_MODE_2
+      - AD3530R_CH_OPERATING_MODE_3
+  range:
+    type: int
+    enum:
+      - AD3530R_CH_OUTPUT_RANGE_0_VREF
+      - AD3530R_CH_OUTPUT_RANGE_0_2VREF
+  hw_ldac_mask:
+    type: uint16_t
+  sw_ldac_mask:
+    type: uint16_t
+  crc_en:
+    type: uint8_t
+  mux_out_sel:
+    type: int
+    enum:
+      - POWERED_DOWN
+      - VOUT0
+      - IOUT0_SOURCE_MODE
+      - IOUT0_SINK_MODE
+      - VOUT1
+      - IOUT1_SOURCE_MODE
+      - IOUT1_SINK_MODE
+      - VOUT2
+      - IOUT2_SOURCE_MODE
+      - IOUT2_SINK_MODE
+      - VOUT3
+      - IOUT3_SOURCE_MODE
+      - IOUT3_SINK_MODE
+      - VOUT4
+      - IOUT4_SOURCE_MODE
+      - IOUT4_SINK_MODE
+      - VOUT5
+      - IOUT5_SOURCE_MODE
+      - IOUT5_SINK_MODE
+      - VOUT6
+      - IOUT6_SOURCE_MODE
+      - IOUT6_SINK_MODE
+      - VOUT7
+      - IOUT7_SOURCE_MODE
+      - IOUT7_SINK_MODE
+      - DIE_TEMPERATURE
+      - TIED_TO_AGND_INTERNALLY

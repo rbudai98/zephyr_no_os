@@ -1,0 +1,9 @@
+# Copyright (c) 2025 Analog Devices Inc.
+
+description: No-os binding for ad7091r device
+
+compatible: "adi,no-os-ad7091r"
+
+include: [spi-device.yaml]
+
+properties:

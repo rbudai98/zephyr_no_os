@@ -1,0 +1,39 @@
+# Copyright (c) 2025 Analog Devices Inc.
+
+description: No-os binding for adxrs290 device
+
+compatible: "adi,no-os-adxrs290"
+
+include: [spi-device.yaml, gpio-controller.yaml]
+
+properties:
+  mode:
+    type: int
+    enum:
+      - ADXRS290_MODE_STANDBY
+      - ADXRS290_MODE_MEASUREMENT
+  lpf:
+    type: int
+    enum:
+      - ADXRS290_LPF_480HZ
+      - ADXRS290_LPF_320HZ
+      - ADXRS290_LPF_160HZ
+      - ADXRS290_LPF_80HZ
+      - ADXRS290_LPF_56HZ6
+      - ADXRS290_LPF_40HZ
+      - ADXRS290_LPF_28HZ3
+      - ADXRS290_LPF_20HZ
+  hpf:
+    type: int
+    enum:
+      - ADXRS290_HPF_ALL_PASS
+      - ADXRS290_HPF_0HZ011
+      - ADXRS290_HPF_0HZ022
+      - ADXRS290_HPF_0HZ044
+      - ADXRS290_HPF_0HZ087
+      - ADXRS290_HPF_0HZ175
+      - ADXRS290_HPF_0HZ350
+      - ADXRS290_HPF_0HZ700
+      - ADXRS290_HPF_1HZ400
+      - ADXRS290_HPF_2HZ800
+      - ADXRS290_HPF_11HZ30

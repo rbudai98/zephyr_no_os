@@ -1,0 +1,124 @@
+# Copyright (c) 2025 Analog Devices Inc.
+
+description: No-os binding for ad4110 device
+
+compatible: "adi,no-os-ad4110"
+
+include: [spi-device.yaml]
+
+properties:
+  volt_ref:
+    type: int
+    enum:
+      - AD4110_EXT_REF 
+      - AD4110_INT_2_5V_REF 
+      - AD4110_AVDD5_REF 
+  data_stat:
+    type: int
+    enum:
+      - AD4110_DISABLE
+      - AD4110_ENABLE
+  data_length:
+    type: int
+    enum:
+      - AD4110_DATA_WL24
+      - AD4110_DATA_WL16
+  afe_crc_en:
+    type: int
+    enum:
+      - AD4110_AFE_CRC_DISABLE
+      - AD4110_AFE_CRC
+  adc_crc_en:
+    type: int
+    enum:
+      - AD4110_ADC_CRC_DISABLE
+      - AD4110_ADC_XOR_CRC
+      - AD4110_ADC_CRC_CRC
+  op_mode:
+    type: int
+    enum:
+      - AD4110_VOLTAGE_MODE
+      - AD4110_CURRENT_MODE
+      - AD4110_CURRENT_MODE_EXT_R_SEL
+      - AD4110_THERMOCOUPLE
+      - AD4110_FLD_POWER_MODE
+      - AD4110_RTD_2W_MODE
+      - AD4110_RTD_3W_MODE
+      - AD4110_RTD_4W_MODE
+  gain:
+    type: int
+    enum:
+      - AD4110_GAIN_0_2
+      - AD4110_GAIN_0_25
+      - AD4110_GAIN_0_3
+      - AD4110_GAIN_0_375
+      - AD4110_GAIN_0_5
+      - AD4110_GAIN_0_75
+      - AD4110_GAIN_1
+      - AD4110_GAIN_1_5
+      - AD4110_GAIN_2
+      - AD4110_GAIN_3
+      - AD4110_GAIN_4
+      - AD4110_GAIN_6
+      - AD4110_GAIN_8
+      - AD4110_GAIN_12
+      - AD4110_GAIN_16
+      - AD4110_GAIN_24
+  sync:
+    type: int
+    enum:
+      - AD4110_SYNC_DIS
+      - AD4110_SYNC_EN
+  afe_clk:
+    type: int
+    enum:
+      - AD4110_AFE_INT_CLOCK 
+      - AD4110_AFE_ADC_CLOCKED 
+  adc_clk:
+    type: int
+    enum:
+      - AD4110_ADC_INT_CLK
+      - AD4110_ADC_INT_CLK_CLKIO
+      - AD4110_ADC_EXT_CLK
+  addr:
+    type: uint8_t
+  bipolar:
+    type: bool
+  analog_input_buff:
+    type: int
+    enum:
+      - DISABLE_AIN_BUFFER
+      - ENABLE_NEG_BUFFER
+      - ENABLE_POS_BUFFER
+      - ENABLE_FULL_BUFFER
+  odr:
+    type: int
+    enum:
+      - KSPS_125_A
+      - KSPS_125_B
+      - KSPS_62P5_A
+      - KSPS_62P5_B
+      - KSPS_31P25
+      - KSPS_25
+      - KSPS_15P625
+      - KSPS_10P417
+      - KSPS_5
+      - KSPS_2P5
+      - KSPS_1
+      - SPS_500
+      - SPS_400P6
+      - SPS_200
+      - SPS_100P2
+      - SPS_60
+      - SPS_50
+      - SPS_20
+      - SPS_16P7
+      - SPS_10
+      - SPS_5
+  order:
+    type: int
+    enum:
+      - sinc5_sinc1 
+      - sinc3 
+  nready_pin:
+    type: uint32_t

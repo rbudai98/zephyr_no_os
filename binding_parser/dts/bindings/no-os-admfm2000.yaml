@@ -1,0 +1,13 @@
+# Copyright (c) 2025 Analog Devices Inc.
+
+description: No-os binding for admfm2000 device
+
+compatible: "adi,no-os-admfm2000"
+
+include: [gpio-controller.yaml]
+
+properties:
+  mixer_mode:
+    type: uint8_t
+  dsa_gain:
+    type: int32_t

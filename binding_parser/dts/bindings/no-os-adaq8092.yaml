@@ -1,0 +1,82 @@
+# Copyright (c) 2025 Analog Devices Inc.
+
+description: No-os binding for adaq8092 device
+
+compatible: "adi,no-os-adaq8092"
+
+include: [spi-device.yaml, gpio-controller.yaml]
+
+properties:
+  pd_mode:
+    type: int
+    enum:
+      - ADAQ8092_NORMAL_OP
+      - ADAQ8092_CH1_NORMAL_CH2_NAP
+      - ADAQ8092_CH1_CH2_NAP
+      - ADAQ8092_SLEEP
+  clk_pol_mode:
+    type: int
+    enum:
+      - ADAQ8092_CLK_POL_NORMAL
+      - ADAQ8092_CLK_POL_INVERTED
+  clk_phase_mode:
+    type: int
+    enum:
+      - ADAQ8092_NO_DELAY
+      - ADAQ8092_CLKOUT_DELAY_45DEG
+      - ADAQ8092_CLKOUT_DELAY_90DEG
+      - ADAQ8092_CLKOUT_DELAY_180DEG
+  clk_dc_mode:
+    type: int
+    enum:
+      - ADAQ8092_CLK_DC_STABILIZER_OFF
+      - ADAQ8092_CLK_DC_STABILIZER_ON
+  lvds_cur_mode:
+    type: int
+    enum:
+      - ADAQ8092_3M5A 
+      - ADAQ8092_4MA 
+      - ADAQ8092_4M5A 
+      - ADAQ8092_3MA 
+      - ADAQ8092_2M5A 
+      - ADAQ8092_2M1A 
+      - ADAQ8092_1M75 
+  lvds_term_mode:
+    type: int
+    enum:
+      - ADAQ8092_TERM_OFF
+      - ADAQ8092_TERM_ON
+  dout_en:
+    type: int
+    enum:
+      - ADAQ8092_DOUT_ON
+      - ADAQ8092_DOUT_OFF
+  dout_mode:
+    type: int
+    enum:
+      - ADAQ8092_FULL_RATE_CMOS
+      - ADAQ8092_DOUBLE_RATE_LVDS
+      - ADAQ8092_DOUBLE_RATE_CMOS
+  test_mode:
+    type: int
+    enum:
+      - ADAQ8092_TEST_OFF 
+      - ADAQ8092_TEST_ONES 
+      - ADAQ8092_TEST_ZEROS 
+      - ADAQ8092_TEST_CHECKERBOARD 
+      - ADAQ8092_TEST_ALTERNATING 
+  alt_bit_pol_en:
+    type: int
+    enum:
+      - ADAQ8092_ALT_BIT_POL_OFF
+      - ADAQ8092_ALT_BIT_POL_ON
+  data_rand_en:
+    type: int
+    enum:
+      - ADAQ8092_DATA_RAND_OFF
+      - ADAQ8092_DATA_RAND_ON
+  twos_comp:
+    type: int
+    enum:
+      - ADAQ8092_OFFSET_BINARY
+      - ADAQ8092_TWOS_COMPLEMENT

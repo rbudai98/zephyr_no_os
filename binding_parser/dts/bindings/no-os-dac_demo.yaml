@@ -1,0 +1,14 @@
+# Copyright (c) 2025 Analog Devices Inc.
+
+description: No-os binding for dac_demo device
+
+compatible: "adi,no-os-dac_demo"
+
+
+properties:
+  dev_global_attr:
+    type: uint32_t
+  dev_ch_attr[MAX_DAC_ADDR]:
+    type: uint32_t
+  loopback_buffer_len:
+    type: uint32_t

@@ -1,0 +1,25 @@
+# Copyright (c) 2025 Analog Devices Inc.
+
+description: No-os binding for adf4368 device
+
+compatible: "adi,no-os-adf4368"
+
+include: [spi-device.yaml]
+
+properties:
+  spi_4wire_en:
+    type: bool
+  cmos_3v3:
+    type: bool
+  ref_doubler_en:
+    type: bool
+  ref_div:
+    type: uint8_t
+  cp_i:
+    type: uint8_t
+  ld_count:
+    type: uint8_t
+  ref_freq_hz:
+    type: uint64_t
+  freq:
+    type: uint64_t

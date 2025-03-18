@@ -1,0 +1,25 @@
+# Copyright (c) 2025 Analog Devices Inc.
+
+description: No-os binding for ltc2983 device
+
+compatible: "adi,no-os-ltc2983"
+
+include: [spi-device.yaml, gpio-controller.yaml]
+
+properties:
+  mux_delay_config_us:
+    type: uint32_t
+  filter_notch_freq:
+    type: int
+    enum:
+      - LTC2983_50_60HZ_REJECTION
+      - LTC2983_60HZ_REJECTION
+      - LTC2983_50HZ_REJECTION
+  custom_addr_ptr:
+    type: uint16_t
+  dev_type:
+    type: int
+    enum:
+      - ID_LTC2983
+      - ID_LTC2984
+      - ID_LTC2986

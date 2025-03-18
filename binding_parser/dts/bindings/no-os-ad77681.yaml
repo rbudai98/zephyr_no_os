@@ -1,0 +1,112 @@
+# Copyright (c) 2025 Analog Devices Inc.
+
+description: No-os binding for ad77681 device
+
+compatible: "adi,no-os-ad77681"
+
+include: [spi-device.yaml]
+
+properties:
+  power_mode:
+    type: int
+    enum:
+      - AD77681_ECO 
+      - AD77681_MEDIAN 
+      - AD77681_FAST 
+  mclk_div:
+    type: int
+    enum:
+      - AD77681_MCLK_DIV_16 
+      - AD77681_MCLK_DIV_8 
+      - AD77681_MCLK_DIV_4 
+      - AD77681_MCLK_DIV_2 
+  conv_mode:
+    type: int
+    enum:
+      - AD77681_CONV_CONTINUOUS 
+      - AD77681_CONV_ONE_SHOT 
+      - AD77681_CONV_SINGLE 
+      - AD77681_CONV_PERIODIC 
+      - AD77681_CONV_STANDBY 
+  diag_mux_sel:
+    type: int
+    enum:
+      - AD77681_TEMP_SENSOR 
+      - AD77681_AIN_SHORT 
+      - AD77681_POSITIVE_FS 
+      - AD77681_NEGATIVE_FS 
+  conv_diag_sel:
+    type: bool
+  conv_len:
+    type: int
+    enum:
+      - AD77681_CONV_24BIT 
+      - AD77681_CONV_16BIT 
+  crc_sel:
+    type: int
+    enum:
+      - AD77681_CRC
+      - AD77681_XOR
+      - AD77681_NO_CRC
+  status_bit:
+    type: uint8_t
+  VCM_out:
+    type: int
+    enum:
+      - AD77681_VCM_HALF_VCC 
+      - AD77681_VCM_2_5V 
+      - AD77681_VCM_2_05V 
+      - AD77681_VCM_1_9V 
+      - AD77681_VCM_1_65V 
+      - AD77681_VCM_1_1V 
+      - AD77681_VCM_0_9V 
+      - AD77681_VCM_OFF 
+  AINn:
+    type: int
+    enum:
+      - AD77681_AINn_ENABLED 
+      - AD77681_AINn_DISABLED 
+  AINp:
+    type: int
+    enum:
+      - AD77681_AINp_ENABLED 
+      - AD77681_AINp_DISABLED 
+  REFn:
+    type: int
+    enum:
+      - AD77681_BUFn_ENABLED 
+      - AD77681_BUFn_DISABLED 
+      - AD77681_BUFn_FULL_BUFFER_ON 
+  REFp:
+    type: int
+    enum:
+      - AD77681_BUFp_ENABLED 
+      - AD77681_BUFp_DISABLED 
+      - AD77681_BUFp_FULL_BUFFER_ON 
+  filter:
+    type: int
+    enum:
+      - AD77681_SINC5 
+      - AD77681_SINC5_DECx8 
+      - AD77681_SINC5_DECx16 
+      - AD77681_SINC3 
+      - AD77681_FIR 
+  decimate:
+    type: int
+    enum:
+      - AD77681_SINC5_FIR_DECx32 
+      - AD77681_SINC5_FIR_DECx64 
+      - AD77681_SINC5_FIR_DECx128 
+      - AD77681_SINC5_FIR_DECx256 
+      - AD77681_SINC5_FIR_DECx512 
+      - AD77681_SINC5_FIR_DECx1024 
+  sinc3_osr:
+    type: uint16_t
+  vref:
+    type: uint16_t
+  mclk:
+    type: uint16_t
+  sample_rate:
+    type: uint32_t
+  data_frame_byte:
+    type: uint8_t

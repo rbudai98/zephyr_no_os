@@ -1,0 +1,55 @@
+# Copyright (c) 2025 Analog Devices Inc.
+
+description: No-os binding for pulsar_adc device
+
+compatible: "adi,no-os-pulsar_adc"
+
+include: [spi-device.yaml, gpio-controller.yaml]
+
+properties:
+  axi_clkgen_rate:
+    type: uint32_t
+  reg_access_speed:
+    type: uint32_t
+  dev_id:
+    type: int
+    enum:
+      - ID_AD4000
+      - ID_AD4001
+      - ID_AD4002
+      - ID_AD4003
+      - ID_AD4004
+      - ID_AD4005
+      - ID_AD4006
+      - ID_AD4007
+      - ID_AD4008
+      - ID_AD4010
+      - ID_AD4011
+      - ID_AD4020
+      - ID_AD4021
+      - ID_AD4022
+      - ID_ADAQ4003
+      - ID_AD7690
+      - ID_AD7691
+      - ID_AD7693
+      - ID_AD7942
+      - ID_AD7944
+      - ID_AD7946
+      - ID_AD7980
+      - ID_AD7982
+      - ID_AD7983
+      - ID_AD7984
+      - ID_AD7985
+      - ID_AD7986
+  buffer_size:
+    type: uint32_t
+  offload_enable:
+    type: bool
+  turbo_mode:
+    type: bool
+  high_z_mode:
+    type: bool
+  span_compression:
+    type: bool
+  en_status_bits:
+    type: bool

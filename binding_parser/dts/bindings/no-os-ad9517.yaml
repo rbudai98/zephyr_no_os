@@ -1,0 +1,16 @@
+# Copyright (c) 2025 Analog Devices Inc.
+
+description: No-os binding for ad9517 device
+
+compatible: "adi,no-os-ad9517"
+
+include: [spi-device.yaml]
+
+properties:
+  ad9517_type:
+    type: int
+    enum:
+      - AD9517_1 
+      - AD9517_2 
+      - AD9517_3 
+      - AD9517_4 

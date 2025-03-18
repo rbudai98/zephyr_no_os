@@ -1,0 +1,9 @@
+# Copyright (c) 2025 Analog Devices Inc.
+
+description: No-os binding for ad7091r5 device
+
+compatible: "adi,no-os-ad7091r5"
+
+include: [i2c-device.yaml, gpio-controller.yaml]
+
+properties:

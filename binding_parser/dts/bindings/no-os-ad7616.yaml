@@ -1,0 +1,45 @@
+# Copyright (c) 2025 Analog Devices Inc.
+
+description: No-os binding for ad7616 device
+
+compatible: "adi,no-os-ad7616"
+
+include: [spi-device.yaml, gpio-controller.yaml]
+
+properties:
+  axi_clkgen_rate:
+    type: uint32_t
+  reg_access_speed:
+    type: uint32_t
+  crc:
+    type: uint8_t
+  core_baseaddr:
+    type: uint32_t
+  mode:
+    type: int
+    enum:
+      - AD7616_SW
+      - AD7616_HW
+  va[8]:
+    type: int
+    enum:
+      - AD7616_2V5 
+      - AD7616_5V 
+      - AD7616_10V 
+  vb[8]:
+    type: int
+    enum:
+      - AD7616_2V5 
+      - AD7616_5V 
+      - AD7616_10V 
+  osr:
+    type: int
+    enum:
+      - AD7616_OSR_0
+      - AD7616_OSR_2
+      - AD7616_OSR_4
+      - AD7616_OSR_8
+      - AD7616_OSR_16
+      - AD7616_OSR_32
+      - AD7616_OSR_64
+      - AD7616_OSR_128

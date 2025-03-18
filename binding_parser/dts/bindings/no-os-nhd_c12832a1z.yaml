@@ -1,0 +1,9 @@
+# Copyright (c) 2025 Analog Devices Inc.
+
+description: No-os binding for nhd_c12832a1z device
+
+compatible: "adi,no-os-nhd_c12832a1z"
+
+include: [spi-device.yaml, gpio-controller.yaml]
+
+properties:

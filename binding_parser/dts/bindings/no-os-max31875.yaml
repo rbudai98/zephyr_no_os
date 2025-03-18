@@ -1,0 +1,9 @@
+# Copyright (c) 2025 Analog Devices Inc.
+
+description: No-os binding for max31875 device
+
+compatible: "adi,no-os-max31875"
+
+include: [i2c-device.yaml]
+
+properties:

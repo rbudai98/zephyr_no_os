@@ -1,0 +1,64 @@
+# Copyright (c) 2025 Analog Devices Inc.
+
+description: No-os binding for adf5355 device
+
+compatible: "adi,no-os-adf5355"
+
+include: [spi-device.yaml]
+
+properties:
+  dev_id:
+    type: int
+    enum:
+      - ADF5355
+      - ADF4355
+      - ADF4355_2
+      - ADF4355_3
+      - ADF4356
+      - ADF5356
+  freq_req:
+    type: uint64_t
+  freq_req_chan:
+    type: uint8_t
+  clkin_freq:
+    type: uint32_t
+  cp_ua:
+    type: uint32_t
+  cp_neg_bleed_en:
+    type: bool
+  cp_gated_bleed_en:
+    type: bool
+  cp_bleed_current_polarity_en:
+    type: bool
+  mute_till_lock_en:
+    type: bool
+  outa_en:
+    type: bool
+  outb_en:
+    type: bool
+  outa_power:
+    type: uint8_t
+  outb_power:
+    type: uint8_t
+  phase_detector_polarity_neg:
+    type: bool
+  ref_diff_en:
+    type: bool
+  mux_out_3v3_en:
+    type: bool
+  ref_doubler_en:
+    type: uint8_t
+  ref_div2_en:
+    type: uint8_t
+  mux_out_sel:
+    type: int
+    enum:
+      - ADF5355_MUXOUT_THREESTATE
+      - ADF5355_MUXOUT_DVDD
+      - ADF5355_MUXOUT_GND
+      - ADF5355_MUXOUT_R_DIV_OUT
+      - ADF5355_MUXOUT_N_DIV_OUT
+      - ADF5355_MUXOUT_ANALOG_LOCK_DETECT
+      - ADF5355_MUXOUT_DIGITAL_LOCK_DETECT
+  outb_sel_fund:
+    type: bool

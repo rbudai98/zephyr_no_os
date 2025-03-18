@@ -1,0 +1,27 @@
+# Copyright (c) 2025 Analog Devices Inc.
+
+description: No-os binding for adf4371 device
+
+compatible: "adi,no-os-adf4371"
+
+include: [spi-device.yaml]
+
+properties:
+  spi_3wire_enable:
+    type: bool
+  clkin_frequency:
+    type: uint32_t
+  differential_ref_clock:
+    type: bool
+  loop_filter_inverting:
+    type: bool
+  charge_pump_microamp:
+    type: uint32_t
+  mute_till_lock_enable:
+    type: bool
+  muxout_select:
+    type: uint32_t
+  muxout_level_1v8_enable:
+    type: bool
+  num_channels:
+    type: uint32_t

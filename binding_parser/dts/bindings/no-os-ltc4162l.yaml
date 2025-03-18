@@ -1,0 +1,20 @@
+# Copyright (c) 2025 Analog Devices Inc.
+
+description: No-os binding for ltc4162l device
+
+compatible: "adi,no-os-ltc4162l"
+
+include: [i2c-device.yaml]
+
+properties:
+  rsnsb:
+    type: uint32_t
+  rsnsi:
+    type: uint32_t
+  id:
+    type: int
+    enum:
+      - ID_LTC4162L
+      - ID_LTC4162F
+      - ID_LTC4162S
+      - ID_LTC4015

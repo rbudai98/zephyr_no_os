@@ -1,0 +1,75 @@
+# Copyright (c) 2025 Analog Devices Inc.
+
+description: No-os binding for ad5758 device
+
+compatible: "adi,no-os-ad5758"
+
+include: [spi-device.yaml, gpio-controller.yaml]
+
+properties:
+  crc_en:
+    type: uint8_t
+  dc_dc_mode:
+    type: int
+    enum:
+      - DC_DC_POWER_OFF
+      - DPC_CURRENT_MODE
+      - DPC_VOLTAGE_MODE
+      - PPC_CURRENT_MODE
+  clkout_config:
+    type: int
+    enum:
+      - CLKOUT_DISABLE
+      - CLKOUT_ENABLE
+  clkout_freq:
+    type: int
+    enum:
+      - CLKOUT_FREQ_416_KHZ
+      - CLKOUT_FREQ_435_KHZ
+      - CLKOUT_FREQ_454_KHZ
+      - CLKOUT_FREQ_476_KHZ
+      - CLKOUT_FREQ_500_KHZ
+      - CLKOUT_FREQ_526_KHZ
+      - CLKOUT_FREQ_555_KHZ
+      - CLKOUT_FREQ_588_KHZ
+  dc_dc_ilimit:
+    type: int
+    enum:
+      - ILIMIT_150_mA
+      - ILIMIT_200_mA
+      - ILIMIT_250_mA
+      - ILIMIT_300_mA
+      - ILIMIT_350_mA
+      - ILIMIT_400_mA
+  output_range:
+    type: int
+    enum:
+      - RANGE_0V_5V 
+      - RANGE_0V_10V 
+      - RANGE_M5V_5V 
+      - RANGE_M10V_10V 
+      - RANGE_0mA_20mA 
+      - RANGE_0mA_24mA 
+      - RANGE_4mA_24mA 
+      - RANGE_M20mA_20mA 
+      - RANGE_M24mA_24mA 
+      - RANGE_M1mA_22mA 
+  slew_rate_clk:
+    type: int
+    enum:
+      - SR_CLOCK_240_KHZ
+      - SR_CLOCK_200_KHZ
+      - SR_CLOCK_150_KHZ
+      - SR_CLOCK_128_KHZ
+      - SR_CLOCK_64_KHZ
+      - SR_CLOCK_32_KHZ
+      - SR_CLOCK_16_KHZ
+      - SR_CLOCK_8_KHZ
+      - SR_CLOCK_4_KHZ
+      - SR_CLOCK_2_KHZ
+      - SR_CLOCK_1_KHZ
+      - SR_CLOCK_512_HZ
+      - SR_CLOCK_256_HZ
+      - SR_CLOCK_128_HZ
+      - SR_CLOCK_64_HZ
+      - SR_CLOCK_16_HZ

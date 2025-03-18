@@ -1,0 +1,9 @@
+# Copyright (c) 2025 Analog Devices Inc.
+
+description: No-os binding for adxl362 device
+
+compatible: "adi,no-os-adxl362"
+
+include: [spi-device.yaml]
+
+properties:

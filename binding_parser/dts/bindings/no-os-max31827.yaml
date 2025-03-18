@@ -1,0 +1,17 @@
+# Copyright (c) 2025 Analog Devices Inc.
+
+description: No-os binding for max31827 device
+
+compatible: "adi,no-os-max31827"
+
+include: [i2c-device.yaml]
+
+properties:
+  comp_int:
+    type: bool
+  alarm_pol:
+    type: bool
+  fault_q:
+    type: uint8_t
+  timeout_enable:
+    type: bool

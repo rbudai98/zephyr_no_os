@@ -1,0 +1,16 @@
+# Copyright (c) 2025 Analog Devices Inc.
+
+description: No-os binding for ad74416h device
+
+compatible: "adi,no-os-ad74416h"
+
+include: [spi-device.yaml, gpio-controller.yaml]
+
+properties:
+  id:
+    type: int
+    enum:
+      - ID_AD74416H
+      - ID_AD74414H
+  dev_addr:
+    type: uint8_t

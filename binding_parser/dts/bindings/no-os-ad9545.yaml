@@ -1,0 +1,14 @@
+# Copyright (c) 2025 Analog Devices Inc.
+
+description: No-os binding for ad9545 device
+
+compatible: "adi,no-os-ad9545"
+
+include: [spi-device.yaml, i2c-device.yaml]
+
+properties:
+  comm_type:
+    type: int
+    enum:
+      - SPI
+      - I2C

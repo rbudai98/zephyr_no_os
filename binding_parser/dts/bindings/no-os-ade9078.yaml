@@ -1,0 +1,11 @@
+# Copyright (c) 2025 Analog Devices Inc.
+
+description: No-os binding for ade9078 device
+
+compatible: "adi,no-os-ade9078"
+
+include: [spi-device.yaml]
+
+properties:
+  power_mode:
+    type: uint8_t

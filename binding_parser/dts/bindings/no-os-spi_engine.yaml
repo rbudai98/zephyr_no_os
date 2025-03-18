@@ -1,0 +1,20 @@
+# Copyright (c) 2025 Analog Devices Inc.
+
+description: No-os binding for spi_engine device
+
+compatible: "adi,no-os-spi_engine"
+
+
+properties:
+  ref_clk_hz:
+    type: uint32_t
+  type:
+    type: enum xil_spi_type
+  spi_engine_baseaddr:
+    type: uint32_t
+  cs_delay:
+    type: uint32_t
+  data_width:
+    type: uint8_t
+  sdo_idle_state:
+    type: uint8_t

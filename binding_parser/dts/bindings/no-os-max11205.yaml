@@ -1,0 +1,11 @@
+# Copyright (c) 2025 Analog Devices Inc.
+
+description: No-os binding for max11205 device
+
+compatible: "adi,no-os-max11205"
+
+include: [spi-device.yaml, gpio-controller.yaml]
+
+properties:
+  vref_mv:
+    type: uint32_t

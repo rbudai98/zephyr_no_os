@@ -1,0 +1,18 @@
+# Copyright (c) 2025 Analog Devices Inc.
+
+description: No-os binding for max22196 device
+
+compatible: "adi,no-os-max22196"
+
+include: [spi-device.yaml, gpio-controller.yaml]
+
+properties:
+  chip_address:
+    type: uint32_t
+  crc_en:
+    type: bool
+  chip_id:
+    type: int
+    enum:
+      - ID_MAX22194
+      - ID_MAX22196

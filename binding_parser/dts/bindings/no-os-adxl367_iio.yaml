@@ -1,0 +1,8 @@
+# Copyright (c) 2025 Analog Devices Inc.
+
+description: No-os binding for adxl367_iio device
+
+compatible: "adi,no-os-adxl367_iio"
+
+
+properties:

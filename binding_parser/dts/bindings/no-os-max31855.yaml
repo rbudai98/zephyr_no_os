@@ -1,0 +1,9 @@
+# Copyright (c) 2025 Analog Devices Inc.
+
+description: No-os binding for max31855 device
+
+compatible: "adi,no-os-max31855"
+
+include: [spi-device.yaml]
+
+properties:

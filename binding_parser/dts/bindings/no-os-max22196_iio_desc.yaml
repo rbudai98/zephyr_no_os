@@ -1,0 +1,8 @@
+# Copyright (c) 2025 Analog Devices Inc.
+
+description: No-os binding for max22196_iio_desc device
+
+compatible: "adi,no-os-max22196_iio_desc"
+
+
+properties:

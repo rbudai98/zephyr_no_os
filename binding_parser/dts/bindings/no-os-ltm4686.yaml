@@ -1,0 +1,19 @@
+# Copyright (c) 2025 Analog Devices Inc.
+
+description: No-os binding for ltm4686 device
+
+compatible: "adi,no-os-ltm4686"
+
+include: [i2c-device.yaml, gpio-controller.yaml]
+
+properties:
+  id:
+    type: int
+    enum:
+      - ID_LTM4686
+      - ID_LTM4686B
+      - ID_LTM4673
+  external_clk_en:
+    type: bool
+  crc_en:
+    type: bool

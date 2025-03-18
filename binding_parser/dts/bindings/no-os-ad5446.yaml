@@ -1,0 +1,24 @@
+# Copyright (c) 2025 Analog Devices Inc.
+
+description: No-os binding for ad5446 device
+
+compatible: "adi,no-os-ad5446"
+
+include: [spi-device.yaml, gpio-controller.yaml]
+
+properties:
+  act_device:
+    type: int
+    enum:
+      - ID_AD5600
+      - ID_AD5553
+      - ID_AD5543
+      - ID_AD5542A
+      - ID_AD5541A
+      - ID_AD5512A
+      - ID_AD5453
+      - ID_AD5452
+      - ID_AD5451
+      - ID_AD5450
+      - ID_AD5446
+      - ID_AD5444

@@ -1,0 +1,31 @@
+# Copyright (c) 2025 Analog Devices Inc.
+
+description: No-os binding for ad7606 device
+
+compatible: "adi,no-os-ad7606"
+
+include: [spi-device.yaml, gpio-controller.yaml]
+
+properties:
+  device_id:
+    type: int
+    enum:
+      - ID_AD7605_4
+      - ID_AD7606_4
+      - ID_AD7606_6
+      - ID_AD7606_8
+      - ID_AD7606B
+      - ID_AD7606C_16
+      - ID_AD7606C_18
+      - ID_AD7608
+      - ID_AD7609
+  sw_mode:
+    type: bool
+  parallel_interface:
+    type: bool
+  offset_ch[AD7606_MAX_CHANNELS]:
+    type: int8_t
+  phase_ch[AD7606_MAX_CHANNELS]:
+    type: uint8_t
+  gain_ch[AD7606_MAX_CHANNELS]:
+    type: uint8_t

@@ -1,0 +1,10 @@
+# Copyright (c) 2025 Analog Devices Inc.
+
+description: No-os binding for max22200_iio_desc device
+
+compatible: "adi,no-os-max22200_iio_desc"
+
+
+properties:
+  ch_enable[MAX22200_CHANNELS]:
+    type: bool

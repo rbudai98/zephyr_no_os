@@ -1,0 +1,9 @@
+# Copyright (c) 2025 Analog Devices Inc.
+
+description: No-os binding for ad7303 device
+
+compatible: "adi,no-os-ad7303"
+
+include: [spi-device.yaml]
+
+properties:

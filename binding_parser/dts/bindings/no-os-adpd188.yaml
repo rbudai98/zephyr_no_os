@@ -1,0 +1,22 @@
+# Copyright (c) 2025 Analog Devices Inc.
+
+description: No-os binding for adpd188 device
+
+compatible: "adi,no-os-adpd188"
+
+include: [gpio-controller.yaml]
+
+properties:
+  device:
+    type: int
+    enum:
+      - ADPD188BI
+      - ADPD1080
+      - ADPD1081
+  phy_opt:
+    type: int
+    enum:
+      - ADPD188_SPI
+      - ADPD188_I2C
+  phy_init:
+    type: union adpd188_phy_init

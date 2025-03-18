@@ -1,0 +1,17 @@
+# Copyright (c) 2025 Analog Devices Inc.
+
+description: No-os binding for ad9265 device
+
+compatible: "adi,no-os-ad9265"
+
+include: [spi-device.yaml]
+
+properties:
+  output_mode:
+    type: uint8_t
+  dco:
+    type: uint8_t
+  dco_en:
+    type: uint8_t
+  nb_lanes:
+    type: uint8_t

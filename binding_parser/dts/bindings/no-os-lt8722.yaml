@@ -1,0 +1,11 @@
+# Copyright (c) 2025 Analog Devices Inc.
+
+description: No-os binding for lt8722 device
+
+compatible: "adi,no-os-lt8722"
+
+include: [spi-device.yaml, gpio-controller.yaml]
+
+properties:
+  start_up_sequence:
+    type: bool

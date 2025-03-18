@@ -1,0 +1,24 @@
+# Copyright (c) 2025 Analog Devices Inc.
+
+description: No-os binding for max538x device
+
+compatible: "adi,no-os-max538x"
+
+include: [i2c-device.yaml]
+
+properties:
+  active_device:
+    type: int
+    enum:
+      - MAX5380L
+      - MAX5380M
+      - MAX5380N
+      - MAX5380K
+      - MAX5381L
+      - MAX5381M
+      - MAX5381N
+      - MAX5381K
+      - MAX5382L
+      - MAX5382M
+      - MAX5382N
+      - MAX5382K

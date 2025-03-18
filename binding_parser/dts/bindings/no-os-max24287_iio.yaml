@@ -1,0 +1,8 @@
+# Copyright (c) 2025 Analog Devices Inc.
+
+description: No-os binding for max24287_iio device
+
+compatible: "adi,no-os-max24287_iio"
+
+
+properties:

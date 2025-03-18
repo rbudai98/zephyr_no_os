@@ -1,0 +1,17 @@
+# Copyright (c) 2025 Analog Devices Inc.
+
+description: No-os binding for ad9152 device
+
+compatible: "adi,no-os-ad9152"
+
+include: [spi-device.yaml]
+
+properties:
+  stpl_samples[2][4]:
+    type: uint32_t
+  interpolation:
+    type: uint32_t
+  prbs_type:
+    type: uint32_t
+  lane_rate_kbps:
+    type: uint32_t

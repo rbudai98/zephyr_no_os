@@ -1,0 +1,11 @@
+# Copyright (c) 2025 Analog Devices Inc.
+
+description: No-os binding for ad5293 device
+
+compatible: "adi,no-os-ad5293"
+
+include: [spi-device.yaml, gpio-controller.yaml]
+
+properties:
+  chip_num:
+    type: uint16_t

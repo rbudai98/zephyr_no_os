@@ -1,0 +1,14 @@
+# Copyright (c) 2025 Analog Devices Inc.
+
+description: No-os binding for ltc2312 device
+
+compatible: "adi,no-os-ltc2312"
+
+include: [spi-device.yaml]
+
+properties:
+  type:
+    type: int
+    enum:
+      - LTC2312_12
+      - LTC2312_14

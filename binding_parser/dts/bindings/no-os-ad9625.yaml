@@ -1,0 +1,13 @@
+# Copyright (c) 2025 Analog Devices Inc.
+
+description: No-os binding for ad9625 device
+
+compatible: "adi,no-os-ad9625"
+
+include: [spi-device.yaml]
+
+properties:
+  lane_rate_kbps:
+    type: uint32_t
+  test_samples[4]:
+    type: uint32_t

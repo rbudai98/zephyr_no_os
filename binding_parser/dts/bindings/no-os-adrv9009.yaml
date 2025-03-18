@@ -1,0 +1,13 @@
+# Copyright (c) 2025 Analog Devices Inc.
+
+description: No-os binding for adrv9009 device
+
+compatible: "adi,no-os-adrv9009"
+
+include: [spi-device.yaml]
+
+properties:
+  trx_lo_frequency:
+    type: uint64_t
+  tx_pa_protection:
+    type: taliseTxPaProtectCfg_t

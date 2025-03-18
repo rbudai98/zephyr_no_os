@@ -1,0 +1,13 @@
+# Copyright (c) 2025 Analog Devices Inc.
+
+description: No-os binding for ade7913 device
+
+compatible: "adi,no-os-ade7913"
+
+include: [spi-device.yaml]
+
+properties:
+  no_devs:
+    type: uint8_t
+  burst_mode:
+    type: uint8_t

@@ -1,0 +1,22 @@
+# Copyright (c) 2025 Analog Devices Inc.
+
+description: No-os binding for ades1754 device
+
+compatible: "adi,no-os-ades1754"
+
+
+properties:
+  id:
+    type: int
+    enum:
+      - ID_ADES1754
+      - ID_ADES1755
+      - ID_ADES1756
+      - ID_ADES1751
+      - ID_ADES1752
+  uart_bridge:
+    type: bool
+  dev_addr:
+    type: uint8_t
+  no_dev:
+    type: uint8_t

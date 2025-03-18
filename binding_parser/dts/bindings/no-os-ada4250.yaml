@@ -1,0 +1,42 @@
+# Copyright (c) 2025 Analog Devices Inc.
+
+description: No-os binding for ada4250 device
+
+compatible: "adi,no-os-ada4250"
+
+include: [spi-device.yaml, gpio-controller.yaml]
+
+properties:
+  device_id:
+    type: int
+    enum:
+      - ADA4230
+      - ADA4250
+  avdd_v:
+    type: int32_t
+  refbuf_en:
+    type: bool
+  gain:
+    type: int
+    enum:
+      - ADA4250_GAIN_1
+      - ADA4250_GAIN_2
+      - ADA4250_GAIN_4
+      - ADA4250_GAIN_8
+      - ADA4250_GAIN_16
+      - ADA4250_GAIN_32
+      - ADA4250_GAIN_64
+      - ADA4250_GAIN_128
+  bias:
+    type: int
+    enum:
+      - ADA4250_BIAS_DISABLE
+      - ADA4250_BIAS_BANDGAP_REF
+      - ADA4250_BIAS_AVDD
+  bandwidth:
+    type: int
+    enum:
+      - ADA4250_BANDWIDTH_LOW
+      - ADA4250_BANDWIDTH_HIGH
+  offset_nv:
+    type: int32_t

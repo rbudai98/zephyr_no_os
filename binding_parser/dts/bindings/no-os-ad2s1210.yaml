@@ -1,0 +1,13 @@
+# Copyright (c) 2025 Analog Devices Inc.
+
+description: No-os binding for ad2s1210 device
+
+compatible: "adi,no-os-ad2s1210"
+
+include: [spi-device.yaml, gpio-controller.yaml]
+
+properties:
+  resolution:
+    type: int8_t
+  clkin_hz:
+    type: uint32_t

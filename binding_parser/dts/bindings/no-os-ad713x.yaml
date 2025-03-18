@@ -1,0 +1,46 @@
+# Copyright (c) 2025 Analog Devices Inc.
+
+description: No-os binding for ad713x device
+
+compatible: "adi,no-os-ad713x"
+
+include: [spi-device.yaml, gpio-controller.yaml]
+
+properties:
+  mode_master_nslave:
+    type: bool
+  dclkmode_free_ngated:
+    type: bool
+  dclkio_out_nin:
+    type: bool
+  pnd:
+    type: bool
+  dev_id:
+    type: int
+    enum:
+      - ID_AD7132
+      - ID_AD7134
+      - ID_AD7136
+      - ID_AD4134
+  adc_data_len:
+    type: int
+    enum:
+      - ADC_16_BIT_DATA
+      - ADC_24_BIT_DATA
+      - ADC_32_BIT_DATA
+      - INVALID
+  crc_header:
+    type: int
+    enum:
+      - NO_CRC
+      - CRC_6
+      - CRC_8
+  format:
+    type: int
+    enum:
+      - SINGLE_CH_DC
+      - DUAL_CH_DC
+      - QUAD_CH_PO
+      - CH_AVG_MODE
+  clk_delay_en:
+    type: bool

@@ -1,0 +1,21 @@
+# Copyright (c) 2025 Analog Devices Inc.
+
+description: No-os binding for adf4106 device
+
+compatible: "adi,no-os-adf4106"
+
+include: [spi-device.yaml, gpio-controller.yaml]
+
+properties:
+  this_device:
+    type: int
+    enum:
+      - ID_ADF4001
+      - ID_ADF4002
+      - ID_ADF4106
+  init_method:
+    type: int
+    enum:
+      - INIT_LATCH
+      - INIT_CEPIN
+      - INIT_COUNTER_RESET

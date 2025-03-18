@@ -1,0 +1,43 @@
+# Copyright (c) 2025 Analog Devices Inc.
+
+description: No-os binding for ad463x device
+
+compatible: "adi,no-os-ad463x"
+
+include: [spi-device.yaml, gpio-controller.yaml]
+
+properties:
+  axi_clkgen_rate:
+    type: uint32_t
+  reg_access_speed:
+    type: uint32_t
+  device_id:
+    type: int
+    enum:
+      - ID_AD4630_24
+      - ID_AD4630_20
+      - ID_AD4630_16
+      - ID_AD4631_24
+      - ID_AD4631_20
+      - ID_AD4631_16
+      - ID_AD4632_24
+      - ID_AD4632_20
+      - ID_AD4632_16
+      - ID_AD4030
+      - ID_ADAQ4224
+  reg_data_width:
+    type: uint8_t
+  lane_mode:
+    type: uint8_t
+  clock_mode:
+    type: uint8_t
+  data_rate:
+    type: uint8_t
+  vref:
+    type: int32_t
+  output_mode:
+    type: uint8_t
+  spi_dma_enable:
+    type: bool
+  offload_enable:
+    type: bool

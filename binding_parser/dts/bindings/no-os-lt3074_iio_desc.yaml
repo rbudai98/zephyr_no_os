@@ -1,0 +1,8 @@
+# Copyright (c) 2025 Analog Devices Inc.
+
+description: No-os binding for lt3074_iio_desc device
+
+compatible: "adi,no-os-lt3074_iio_desc"
+
+
+properties:

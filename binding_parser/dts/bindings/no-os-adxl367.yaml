@@ -1,0 +1,16 @@
+# Copyright (c) 2025 Analog Devices Inc.
+
+description: No-os binding for adxl367 device
+
+compatible: "adi,no-os-adxl367"
+
+include: [spi-device.yaml, i2c-device.yaml]
+
+properties:
+  comm_type:
+    type: int
+    enum:
+      - ADXL367_SPI_COMM
+      - ADXL367_I2C_COMM
+  i2c_slave_address:
+    type: uint8_t

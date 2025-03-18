@@ -1,0 +1,10 @@
+# Copyright (c) 2025 Analog Devices Inc.
+
+description: No-os binding for ltc7841_iio_desc device
+
+compatible: "adi,no-os-ltc7841_iio_desc"
+
+
+properties:
+  LTC7841_rsense_value:
+    type: uint8_t

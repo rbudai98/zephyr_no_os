@@ -1,0 +1,27 @@
+# Copyright (c) 2025 Analog Devices Inc.
+
+description: No-os binding for lt8491 device
+
+compatible: "adi,no-os-lt8491"
+
+include: [i2c-device.yaml]
+
+properties:
+  rsense1_micro_ohms:
+    type: unsigned int
+  rimon_out_ohms:
+    type: unsigned int
+  rsense2_micro_ohms:
+    type: unsigned int
+  rdaco_ohms:
+    type: unsigned int
+  rfbout1_ohms:
+    type: unsigned int
+  rfbout2_ohms:
+    type: unsigned int
+  rdaci_ohms:
+    type: unsigned int
+  rfbin2_ohms:
+    type: unsigned int
+  rfbin1_ohms:
+    type: unsigned int

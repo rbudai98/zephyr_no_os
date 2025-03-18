@@ -1,0 +1,16 @@
+# Copyright (c) 2025 Analog Devices Inc.
+
+description: No-os binding for ad7689 device
+
+compatible: "adi,no-os-ad7689"
+
+include: [spi-device.yaml]
+
+properties:
+  id:
+    type: int
+    enum:
+      - ID_AD7689
+      - ID_AD7682
+      - ID_AD7949
+      - ID_AD7699

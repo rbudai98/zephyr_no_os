@@ -1,0 +1,8 @@
+# Copyright (c) 2025 Analog Devices Inc.
+
+description: No-os binding for ad5940_iio device
+
+compatible: "adi,no-os-ad5940_iio"
+
+
+properties:

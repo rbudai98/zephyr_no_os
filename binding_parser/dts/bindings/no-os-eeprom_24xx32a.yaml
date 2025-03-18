@@ -1,0 +1,9 @@
+# Copyright (c) 2025 Analog Devices Inc.
+
+description: No-os binding for eeprom_24xx32a device
+
+compatible: "adi,no-os-eeprom_24xx32a"
+
+include: [i2c-device.yaml]
+
+properties:

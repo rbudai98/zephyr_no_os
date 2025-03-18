@@ -1,0 +1,19 @@
+# Copyright (c) 2025 Analog Devices Inc.
+
+description: No-os binding for ad525x device
+
+compatible: "adi,no-os-ad525x"
+
+include: [spi-device.yaml, i2c-device.yaml, gpio-controller.yaml]
+
+properties:
+  this_device:
+    type: int
+    enum:
+      - ID_AD5232
+      - ID_AD5235
+      - ID_ADN2850
+      - ID_AD5252
+      - ID_AD5251
+      - ID_AD5254
+      - ID_AD5253

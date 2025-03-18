@@ -1,0 +1,16 @@
+# Copyright (c) 2025 Analog Devices Inc.
+
+description: No-os binding for ad9833 device
+
+compatible: "adi,no-os-ad9833"
+
+include: [spi-device.yaml, gpio-controller.yaml]
+
+properties:
+  act_device:
+    type: int
+    enum:
+      - ID_AD9833
+      - ID_AD9834
+      - ID_AD9837
+      - ID_AD9838

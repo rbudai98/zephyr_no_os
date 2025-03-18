@@ -1,0 +1,25 @@
+# Copyright (c) 2025 Analog Devices Inc.
+
+description: No-os binding for ad74xx device
+
+compatible: "adi,no-os-ad74xx"
+
+include: [spi-device.yaml, gpio-controller.yaml]
+
+properties:
+  device_bits_number:
+    type: int8_t
+  part_number:
+    type: int
+    enum:
+      - ID_AD7466 
+      - ID_AD7467 
+      - ID_AD7468 
+      - ID_AD7475 
+      - ID_AD7476 
+      - ID_AD7476A 
+      - ID_AD7477 
+      - ID_AD7477A 
+      - ID_AD7478 
+      - ID_AD7478A 
+      - ID_AD7495 

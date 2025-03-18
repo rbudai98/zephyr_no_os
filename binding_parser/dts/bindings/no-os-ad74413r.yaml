@@ -1,0 +1,14 @@
+# Copyright (c) 2025 Analog Devices Inc.
+
+description: No-os binding for ad74413r device
+
+compatible: "adi,no-os-ad74413r"
+
+include: [spi-device.yaml, gpio-controller.yaml]
+
+properties:
+  chip_id:
+    type: int
+    enum:
+      - AD74413R
+      - AD74412R

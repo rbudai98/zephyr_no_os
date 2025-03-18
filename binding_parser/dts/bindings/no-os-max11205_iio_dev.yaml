@@ -1,0 +1,13 @@
+# Copyright (c) 2025 Analog Devices Inc.
+
+description: No-os binding for max11205_iio_dev device
+
+compatible: "adi,no-os-max11205_iio_dev"
+
+
+properties:
+  dev_id:
+    type: int
+    enum:
+      - MAX11205A
+      - MAX11205B

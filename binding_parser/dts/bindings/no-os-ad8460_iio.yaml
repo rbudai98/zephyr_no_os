@@ -1,0 +1,8 @@
+# Copyright (c) 2025 Analog Devices Inc.
+
+description: No-os binding for ad8460_iio device
+
+compatible: "adi,no-os-ad8460_iio"
+
+
+properties:

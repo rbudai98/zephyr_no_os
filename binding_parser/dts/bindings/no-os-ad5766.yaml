@@ -1,0 +1,40 @@
+# Copyright (c) 2025 Analog Devices Inc.
+
+description: No-os binding for ad5766 device
+
+compatible: "adi,no-os-ad5766"
+
+include: [spi-device.yaml, gpio-controller.yaml]
+
+properties:
+  daisy_chain_en:
+    type: int
+    enum:
+      - AD5766_ENABLE
+      - AD5766_DISABLE
+  clr:
+    type: int
+    enum:
+      - AD5766_ZERO
+      - AD5766_MID
+      - AD5766_FULL
+  span:
+    type: int
+    enum:
+      - AD5766_M_20V_TO_0V
+      - AD5766_M_16V_TO_0V
+      - AD5766_M_10V_TO_0V
+      - AD5766_M_12V_TO_P_14V
+      - AD5766_M_16V_TO_P_10V
+      - AD5766_M_5V_TO_P_6V
+      - AD5766_M_10V_TO_P_10V
+  pwr_dac_setting:
+    type: uint16_t
+  pwr_dither_setting:
+    type: uint16_t
+  dither_signal_setting:
+    type: uint32_t
+  inv_dither_setting:
+    type: uint16_t
+  dither_scale_setting:
+    type: uint32_t

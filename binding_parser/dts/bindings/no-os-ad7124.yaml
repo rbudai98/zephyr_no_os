@@ -1,0 +1,22 @@
+# Copyright (c) 2025 Analog Devices Inc.
+
+description: No-os binding for ad7124 device
+
+compatible: "adi,no-os-ad7124"
+
+include: [spi-device.yaml]
+
+properties:
+  active_device:
+    type: int
+    enum:
+      - ID_AD7124_4
+      - ID_AD7124_8
+  ref_en:
+    type: bool
+  power_mode:
+    type: int
+    enum:
+      - AD7124_LOW_POWER
+      - AD7124_MID_POWER
+      - AD7124_HIGH_POWER

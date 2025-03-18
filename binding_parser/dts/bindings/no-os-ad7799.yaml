@@ -1,0 +1,25 @@
+# Copyright (c) 2025 Analog Devices Inc.
+
+description: No-os binding for ad7799 device
+
+compatible: "adi,no-os-ad7799"
+
+include: [spi-device.yaml]
+
+properties:
+  chip_type:
+    type: int
+    enum:
+      - ID_AD7798 
+      - ID_AD7799 
+  gain:
+    type: uint8_t
+  polarity:
+    type: bool
+  vref_mv:
+    type: uint32_t
+  precision:
+    type: int
+    enum:
+      - AD7799_PRECISION_MV
+      - AD7799_PRECISION_UV

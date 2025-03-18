@@ -1,0 +1,12 @@
+# Copyright (c) 2025 Analog Devices Inc.
+
+description: No-os binding for ad5791_iio device
+
+compatible: "adi,no-os-ad5791_iio"
+
+
+properties:
+  vref_mv:
+    type: uint32_t
+  vref_neg_mv:
+    type: uint32_t

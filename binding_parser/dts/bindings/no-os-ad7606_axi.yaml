@@ -1,0 +1,16 @@
+# Copyright (c) 2025 Analog Devices Inc.
+
+description: No-os binding for ad7606_axi device
+
+compatible: "adi,no-os-ad7606_axi"
+
+
+properties:
+  axi_clkgen_rate:
+    type: uint32_t
+  core_baseaddr:
+    type: uint32_t
+  rx_dma_baseaddr:
+    type: uint32_t
+  reg_access_speed:
+    type: uint32_t

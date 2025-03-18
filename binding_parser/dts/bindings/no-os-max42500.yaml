@@ -1,0 +1,35 @@
+# Copyright (c) 2025 Analog Devices Inc.
+
+description: No-os binding for max42500 device
+
+compatible: "adi,no-os-max42500"
+
+include: [i2c-device.yaml, gpio-controller.yaml]
+
+properties:
+  addr_sel:
+    type: uint8_t
+  pece:
+    type: uint8_t
+  vmon_en:
+    type: uint8_t
+  vmon_vmpd:
+    type: uint8_t
+  reset_map:
+    type: uint8_t
+  wd_mode:
+    type: int
+    enum:
+      - MAX42500_WD_MODE_CH_RESP
+      - MAX42500_WD_MODE_SIMPLE
+      - MAX42500_WD_MODE_MAX
+  wd_cdiv:
+    type: uint8_t
+  wd_close:
+    type: uint8_t
+  wd_open:
+    type: uint8_t
+  wd_1ud:
+    type: uint8_t
+  wd_en:
+    type: uint8_t

@@ -1,0 +1,8 @@
+# Copyright (c) 2025 Analog Devices Inc.
+
+description: No-os binding for iio_ad9361 device
+
+compatible: "adi,no-os-iio_ad9361"
+
+
+properties:

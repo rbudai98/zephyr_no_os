@@ -1,0 +1,25 @@
+# Copyright (c) 2025 Analog Devices Inc.
+
+description: No-os binding for lt7170 device
+
+compatible: "adi,no-os-lt7170"
+
+include: [i2c-device.yaml, gpio-controller.yaml]
+
+properties:
+  chip_id:
+    type: int
+    enum:
+      - ID_LT7170
+      - ID_LT7170_1
+      - ID_LT7171
+      - ID_LT7171_1
+  fault_cfg:
+    type: int
+    enum:
+      - LT7170_FAULT_PIN_INPUT
+      - LT7170_FAULT_PIN_OUTPUT
+  external_clk_en:
+    type: bool
+  crc_en:
+    type: bool

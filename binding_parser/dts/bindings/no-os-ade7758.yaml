@@ -1,0 +1,9 @@
+# Copyright (c) 2025 Analog Devices Inc.
+
+description: No-os binding for ade7758 device
+
+compatible: "adi,no-os-ade7758"
+
+include: [spi-device.yaml]
+
+properties:

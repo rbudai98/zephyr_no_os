@@ -1,0 +1,14 @@
+# Copyright (c) 2025 Analog Devices Inc.
+
+description: No-os binding for adc_demo device
+
+compatible: "adi,no-os-adc_demo"
+
+
+properties:
+  dev_global_attr:
+    type: uint32_t
+  dev_ch_attr[MAX_ADC_ADDR]:
+    type: uint32_t
+  ext_buff_len:
+    type: uint32_t

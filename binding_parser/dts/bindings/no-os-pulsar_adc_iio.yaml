@@ -1,0 +1,10 @@
+# Copyright (c) 2025 Analog Devices Inc.
+
+description: No-os binding for pulsar_adc_iio device
+
+compatible: "adi,no-os-pulsar_adc_iio"
+
+
+properties:
+  ref_voltage_mv:
+    type: uint32_t

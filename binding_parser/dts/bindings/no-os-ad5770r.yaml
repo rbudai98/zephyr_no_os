@@ -1,0 +1,31 @@
+# Copyright (c) 2025 Analog Devices Inc.
+
+description: No-os binding for ad5770r device
+
+compatible: "adi,no-os-ad5770r"
+
+include: [spi-device.yaml, gpio-controller.yaml]
+
+properties:
+  external_reference:
+    type: bool
+  reference_selector:
+    type: int
+    enum:
+      - AD5770R_EXT_REF_2_5_V 
+      - AD5770R_INT_REF_1_25_V_OUT_ON
+      - AD5770R_EXT_REF_1_25_V
+      - AD5770R_INT_REF_1_25_V_OUT_OFF
+  output_filter[6]:
+    type: int
+    enum:
+      - AD5770R_OUTPUT_FILTER_RESISTOR_60_OHM 
+      - AD5770R_OUTPUT_FILTER_RESISTOR_5_6_KOHM 
+      - AD5770R_OUTPUT_FILTER_RESISTOR_11_2_KOHM
+      - AD5770R_OUTPUT_FILTER_RESISTOR_22_2_KOHM
+      - AD5770R_OUTPUT_FILTER_RESISTOR_44_4_KOHM
+      - AD5770R_OUTPUT_FILTER_RESISTOR_104_KOHM
+  dac_value[6]:
+    type: uint16_t
+  input_value[6]:
+    type: uint16_t

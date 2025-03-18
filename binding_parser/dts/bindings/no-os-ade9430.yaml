@@ -1,0 +1,11 @@
+# Copyright (c) 2025 Analog Devices Inc.
+
+description: No-os binding for ade9430 device
+
+compatible: "adi,no-os-ade9430"
+
+include: [spi-device.yaml]
+
+properties:
+  temp_en:
+    type: bool

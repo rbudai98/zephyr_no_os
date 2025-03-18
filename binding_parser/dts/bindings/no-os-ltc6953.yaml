@@ -1,0 +1,11 @@
+# Copyright (c) 2025 Analog Devices Inc.
+
+description: No-os binding for ltc6953 device
+
+compatible: "adi,no-os-ltc6953"
+
+include: [spi-device.yaml]
+
+properties:
+  vco_frequency:
+    type: float

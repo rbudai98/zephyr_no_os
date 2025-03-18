@@ -1,0 +1,13 @@
+# Copyright (c) 2025 Analog Devices Inc.
+
+description: No-os binding for adp1055 device
+
+compatible: "adi,no-os-adp1055"
+
+include: [i2c-device.yaml, gpio-controller.yaml]
+
+properties:
+  on_off_config:
+    type: uint8_t
+  ext_syni:
+    type: bool

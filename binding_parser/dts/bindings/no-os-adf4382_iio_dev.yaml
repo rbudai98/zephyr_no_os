@@ -1,0 +1,8 @@
+# Copyright (c) 2025 Analog Devices Inc.
+
+description: No-os binding for adf4382_iio_dev device
+
+compatible: "adi,no-os-adf4382_iio_dev"
+
+
+properties:

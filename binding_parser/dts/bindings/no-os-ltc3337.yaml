@@ -1,0 +1,11 @@
+# Copyright (c) 2025 Analog Devices Inc.
+
+description: No-os binding for ltc3337 device
+
+compatible: "adi,no-os-ltc3337"
+
+include: [i2c-device.yaml]
+
+properties:
+  prescale:
+    type: uint8_t

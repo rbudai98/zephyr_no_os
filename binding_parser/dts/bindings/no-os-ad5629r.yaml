@@ -1,0 +1,17 @@
+# Copyright (c) 2025 Analog Devices Inc.
+
+description: No-os binding for ad5629r device
+
+compatible: "adi,no-os-ad5629r"
+
+include: [spi-device.yaml, i2c-device.yaml, gpio-controller.yaml]
+
+properties:
+  act_device:
+    type: int
+    enum:
+      - ID_AD5629R
+      - ID_AD5669R
+      - ID_AD5668
+      - ID_AD5648
+      - ID_AD5628

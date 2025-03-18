@@ -1,0 +1,50 @@
+# Copyright (c) 2025 Analog Devices Inc.
+
+description: No-os binding for adis device
+
+compatible: "adi,no-os-adis"
+
+include: [spi-device.yaml, gpio-controller.yaml]
+
+properties:
+  ext_clk:
+    type: uint32_t
+  sync_mode:
+    type: uint32_t
+  dev_id:
+    type: int
+    enum:
+      - ADIS16465_1
+      - ADIS16465_2
+      - ADIS16465_3
+      - ADIS16467_1
+      - ADIS16467_2
+      - ADIS16467_3
+      - ADIS16470
+      - ADIS16475_1
+      - ADIS16475_2
+      - ADIS16475_3
+      - ADIS16477_1
+      - ADIS16477_2
+      - ADIS16477_3
+      - ADIS16500
+      - ADIS16501
+      - ADIS16505_1
+      - ADIS16505_2
+      - ADIS16505_3
+      - ADIS16507_1
+      - ADIS16507_2
+      - ADIS16507_3
+      - ADIS16545_1
+      - ADIS16545_2
+      - ADIS16545_3
+      - ADIS16547_1
+      - ADIS16547_2
+      - ADIS16547_3
+      - ADIS16550
+      - ADIS16575_2
+      - ADIS16575_3
+      - ADIS16576_2
+      - ADIS16576_3
+      - ADIS16577_2
+      - ADIS16577_3

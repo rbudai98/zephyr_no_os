@@ -1,0 +1,21 @@
+# Copyright (c) 2025 Analog Devices Inc.
+
+description: No-os binding for adxl313 device
+
+compatible: "adi,no-os-adxl313"
+
+
+properties:
+  comm_init:
+    type: union adxl313_comm_init_param
+  comm_type:
+    type: int
+    enum:
+      - ADXL313_SPI_COMM 
+      - ADXL313_I2C_COMM 
+  dev_type:
+    type: int
+    enum:
+      - ID_ADXL312 
+      - ID_ADXL313 
+      - ID_ADXL314 

@@ -1,0 +1,15 @@
+# Copyright (c) 2025 Analog Devices Inc.
+
+description: No-os binding for ad799x device
+
+compatible: "adi,no-os-ad799x"
+
+include: [i2c-device.yaml]
+
+properties:
+  part_number:
+    type: int
+    enum:
+      - AD7991
+      - AD7995
+      - AD7999

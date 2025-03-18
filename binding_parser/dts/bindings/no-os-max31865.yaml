@@ -1,0 +1,11 @@
+# Copyright (c) 2025 Analog Devices Inc.
+
+description: No-os binding for max31865 device
+
+compatible: "adi,no-os-max31865"
+
+include: [spi-device.yaml]
+
+properties:
+  rtd_rc:
+    type: float

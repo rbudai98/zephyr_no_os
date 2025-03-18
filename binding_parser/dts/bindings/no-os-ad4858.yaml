@@ -1,0 +1,102 @@
+# Copyright (c) 2025 Analog Devices Inc.
+
+description: No-os binding for ad4858 device
+
+compatible: "adi,no-os-ad4858"
+
+include: [spi-device.yaml, gpio-controller.yaml]
+
+properties:
+  prod_id:
+    type: int
+    enum:
+      - AD4858_PROD_ID_L 
+      - AD4857_PROD_ID_L 
+      - AD4856_PROD_ID_L 
+      - AD4855_PROD_ID_L 
+      - AD4854_PROD_ID_L 
+      - AD4853_PROD_ID_L 
+      - AD4852_PROD_ID_L 
+      - AD4851_PROD_ID_L 
+      - AD4858I_PROD_ID_L 
+  addr_ascension_enable:
+    type: bool
+  operating_mode:
+    type: int
+    enum:
+      - AD4858_NORMAL_OP_MODE 
+      - AD4858_LOW_POWER_OP_MODE 
+      - AD4858_NUM_OF_OP_MODES 
+  osr_enable:
+    type: bool
+  osr_ratio:
+    type: int
+    enum:
+      - AD4858_OSR_2
+      - AD4858_OSR_4
+      - AD4858_OSR_8
+      - AD4858_OSR_16
+      - AD4858_OSR_32
+      - AD4858_OSR_64
+      - AD4858_OSR_128
+      - AD4858_OSR_256
+      - AD4858_OSR_512
+      - AD4858_OSR_1024
+      - AD4858_OSR_2048
+      - AD4858_OSR_4096
+      - AD4858_OSR_8192
+      - AD4858_OSR_16384
+      - AD4858_OSR_32768
+      - AD4858_OSR_65536
+      - AD4858_NUM_OF_OSR_RATIO
+  packet_format:
+    type: int
+    enum:
+      - AD4858_PACKET_16_BIT
+      - AD4858_PACKET_20_BIT
+      - AD4858_PACKET_24_BIT
+      - AD4858_PACKET_32_BIT
+  test_pattern:
+    type: bool
+  use_default_chn_configs:
+    type: bool
+  chn_softspan[AD4858_NUM_CHANNELS]:
+    type: int
+    enum:
+      - AD4858_RANGE_0V_TO_2_5V
+      - AD4858_RANGE_NEG_2_5V_TO_POS_2_5V
+      - AD4858_RANGE_0V_TO_5_0V
+      - AD4858_RANGE_NEG_5_0V_TO_POS_5_0V
+      - AD4858_RANGE_0V_TO_6_25V
+      - AD4858_RANGE_NEG_6_25V_TO_POS_6_25V
+      - AD4858_RANGE_0V_TO_10_0V
+      - AD4858_RANGE_NEG_10_0V_TO_POS_10_0V
+      - AD4858_RANGE_0V_TO_12_5V
+      - AD4858_RANGE_NEG_12_5V_TO_POS_12_5V
+      - AD4858_RANGE_0V_TO_20_0V
+      - AD4858_RANGE_NEG_20_0V_TO_POS_20_0V
+      - AD4858_RANGE_0V_TO_25_0V
+      - AD4858_RANGE_NEG_25_0V_TO_POS_25_0V
+      - AD4858_RANGE_0V_TO_40_0V
+      - AD4858_RANGE_NEG_40_0V_TO_POS_40_0V
+      - AD4858_NUM_OF_SOFTSPAN
+  chn_offset[AD4858_NUM_CHANNELS]:
+    type: uint32_t
+  chn_gain[AD4858_NUM_CHANNELS]:
+    type: uint16_t
+  chn_phase[AD4858_NUM_CHANNELS]:
+    type: uint16_t
+  chn_or[AD4858_NUM_CHANNELS]:
+    type: uint16_t
+  chn_ur[AD4858_NUM_CHANNELS]:
+    type: uint16_t
+  chn_sleep_value[AD4858_NUM_CHANNELS]:
+    type: int
+    enum:
+      - AD4858_SLEEP_DISABLE
+      - AD4858_SLEEP_ENABLE
+  chn_seamless_hdr[AD4858_NUM_CHANNELS]:
+    type: int
+    enum:
+      - AD4858_SEAMLESS_HDR_DISABLE
+      - AD4858_SEAMLESS_HDR_ENABLE

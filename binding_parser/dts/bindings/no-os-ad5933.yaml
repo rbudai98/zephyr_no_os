@@ -1,0 +1,17 @@
+# Copyright (c) 2025 Analog Devices Inc.
+
+description: No-os binding for ad5933 device
+
+compatible: "adi,no-os-ad5933"
+
+include: [i2c-device.yaml]
+
+properties:
+  current_sys_clk:
+    type: uint32_t
+  current_clock_source:
+    type: uint8_t
+  current_gain:
+    type: uint8_t
+  current_range:
+    type: uint8_t

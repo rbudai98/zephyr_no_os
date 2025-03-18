@@ -1,0 +1,52 @@
+# Copyright (c) 2025 Analog Devices Inc.
+
+description: No-os binding for ltc2992 device
+
+compatible: "adi,no-os-ltc2992"
+
+include: [i2c-device.yaml, gpio-controller.yaml]
+
+properties:
+  resolution:
+    type: int
+    enum:
+      - LTC2992_RESOLUTION_12_BIT
+      - LTC2992_RESOLUTION_8_BIT
+  calibration:
+    type: int
+    enum:
+      - LTC2992_CALIBRATE_ALWAYS
+      - LTC2992_CALIBRATE_ON_DEMAND
+  measure_mode:
+    type: int
+    enum:
+      - LTC2992_MODE_CONTINUOUS
+      - LTC2992_MODE_SNAPSHOT
+      - LTC2992_MODE_SINGLE_CYCLE
+      - LTC2992_MODE_SHUTDOWN
+  continuous_vsel:
+    type: int
+    enum:
+      - LTC2992_CONT_VSEL_ALL
+      - LTC2992_CONT_VSEL_SENSE_ONLY
+      - LTC2992_CONT_VSEL_GPIO1_GPIO2
+      - LTC2992_CONT_VSEL_GPIOS_ONLY
+  snapshot_vsel:
+    type: int
+    enum:
+      - LTC2992_SNAP_VSEL_SENSE1
+      - LTC2992_SNAP_VSEL_SENSE2
+      - LTC2992_SNAP_VSEL_GPIO1
+      - LTC2992_SNAP_VSEL_GPIO2
+      - LTC2992_SNAP_VSEL_GPIO3
+      - LTC2992_SNAP_VSEL_GPIO4
+      - LTC2992_SNAP_VSEL_SENSE1_SENSE2
+      - LTC2992_SNAP_VSEL_GPIO1_GPIO2
+  shunt_resistor:
+    type: uint32_t
+  alert_clear:
+    type: bool
+  fault_clear_on_read:
+    type: bool
+  stuck_bus_timer_wakeup_en:
+    type: bool

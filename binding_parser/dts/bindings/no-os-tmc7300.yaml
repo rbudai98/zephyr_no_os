@@ -1,0 +1,12 @@
+# Copyright (c) 2025 Analog Devices Inc.
+
+description: No-os binding for tmc7300 device
+
+compatible: "adi,no-os-tmc7300"
+
+
+properties:
+  addr:
+    type: uint32_t
+  parallel_mode:
+    type: bool

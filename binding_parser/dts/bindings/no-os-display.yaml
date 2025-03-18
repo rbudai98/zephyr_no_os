@@ -1,0 +1,12 @@
+# Copyright (c) 2025 Analog Devices Inc.
+
+description: No-os binding for display device
+
+compatible: "adi,no-os-display"
+
+
+properties:
+  cols_nb:
+    type: uint8_t
+  rows_nb:
+    type: uint8_t

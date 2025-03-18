@@ -1,0 +1,25 @@
+# Copyright (c) 2025 Analog Devices Inc.
+
+description: No-os binding for adpd410x device
+
+compatible: "adi,no-os-adpd410x"
+
+include: [gpio-controller.yaml]
+
+properties:
+  dev_ops_init:
+    type: union phy_comm_init_param
+  dev_type:
+    type: int
+    enum:
+      - ADPD4100
+      - ADPD4101
+  clk_opt:
+    type: int
+    enum:
+      - ADPD410X_INTLFO_INTHFO
+      - ADPD410X_EXTLFO_INTHFO
+      - ADPD410X_INTLFO_EXTHFO
+      - ADPD410X_GENLFO_EXTHFO
+  ext_lfo_freq:
+    type: uint32_t

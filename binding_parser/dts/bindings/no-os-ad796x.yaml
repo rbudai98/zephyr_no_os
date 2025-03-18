@@ -1,0 +1,23 @@
+# Copyright (c) 2025 Analog Devices Inc.
+
+description: No-os binding for ad796x device
+
+compatible: "adi,no-os-ad796x"
+
+include: [gpio-controller.yaml]
+
+properties:
+  mode:
+    type: int
+    enum:
+      - AD796X_MODE0_POWER_DOWN
+      - AD796X_MODE1_EXT_REF_5P0
+      - AD796X_MODE2_INT_REF_4P0
+      - AD796X_MODE3_EXT_REF_4P0
+      - AD796X_MODE4_SNOOZE
+      - AD796X_MODE5_TEST
+      - AD796X_MODE6_INVALID
+      - AD796X_MODE7_EXT_REF_5P0_9MHZ
+      - AD796X_MODE8_INT_REF_4P0_9MHZ
+      - AD796X_MODE9_EXT_REF_4P0_9MHZ
+      - AD796X_MODE10_SNOOZE2

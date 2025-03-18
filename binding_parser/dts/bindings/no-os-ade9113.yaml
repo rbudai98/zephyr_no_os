@@ -1,0 +1,11 @@
+# Copyright (c) 2025 Analog Devices Inc.
+
+description: No-os binding for ade9113 device
+
+compatible: "adi,no-os-ade9113"
+
+include: [spi-device.yaml, gpio-controller.yaml]
+
+properties:
+  no_devs:
+    type: uint8_t

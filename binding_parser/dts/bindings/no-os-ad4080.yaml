@@ -1,0 +1,106 @@
+# Copyright (c) 2025 Analog Devices Inc.
+
+description: No-os binding for ad4080 device
+
+compatible: "adi,no-os-ad4080"
+
+include: [spi-device.yaml]
+
+properties:
+  spi3wire:
+    type: bool
+  addr_asc:
+    type: int
+    enum:
+      - AD4080_ADDR_DECR
+      - AD4080_ADDR_INCR
+  single_instr:
+    type: int
+    enum:
+      - AD4080_STREAM_MODE
+      - AD4080_SINGLE_INST
+  short_instr:
+    type: int
+    enum:
+      - AD4080_15_BIT_ADDR
+      - AD4080_7_BIT_ADDR
+  op_mode:
+    type: int
+    enum:
+      - AD4080_OP_NORMAL
+      - AD4080_OP_STANDBY
+      - AD4080_OP_LOW_POWER
+  strict_reg:
+    type: int
+    enum:
+      - AD4080_REG_NORMAL_MODE
+      - AD4080_REG_STRICT_MODE
+  intf_chk_en:
+    type: int
+    enum:
+      - AD4080_DATA
+      - AD4080_FIXED_PATTERN
+  cnv_spi_lvds_lanes:
+    type: int
+    enum:
+      - AD4080_ONE_LANE
+      - AD4080_MULTIPLE_LANES
+  conv_data_spi_lvds:
+    type: int
+    enum:
+      - AD4080_CONV_DATA_LVDS
+      - AD4080_CONV_DATA_SPI
+  lvds_cnv_clk_cnt:
+    type: uint8_t
+  lvds_self_clk_mode:
+    type: int
+    enum:
+      - AD4080_ECHO_CLK_MODE
+      - AD4080_SELF_CLK_MODE
+  cnv_clk_mode:
+    type: int
+    enum:
+      - AD4080_CNV_CMOS_MODE
+      - AD4080_CNV_LVDS_MODE
+  lvds_vod:
+    type: int
+    enum:
+      - AD4080_185mVPP 
+      - AD4080_240mVPP 
+      - AD4080_325mVPP 
+  ana_dig_ldo_pd:
+    type: int
+    enum:
+      - AD4080_AD_LDO_EN
+      - AD4080_AD_LDO_DISABLE
+  intf_ldo_pd:
+    type: int
+    enum:
+      - AD4080_INTF_LDO_EN
+      - AD4080_INTF_LDO_DISABLE
+  fifo_mode:
+    type: int
+    enum:
+      - AD4080_FIFO_DISABLE
+      - AD4080_IMMEDIATE_TRIGGER
+      - AD4080_EVENT_TRIGGER_LAST_WM
+      - AD4080_EVENT_TRIGGER
+  gpio_op_enable[NUM_AD4080_GPIO]:
+    type: int
+    enum:
+      - AD4080_GPIO_INPUT
+      - AD4080_GPIO_OUTPUT
+  gpio_op_func_sel[NUM_AD4080_GPIO]:
+    type: int
+    enum:
+      - AD4080_GPIO_ADI_NSPI_SDO_DATA
+      - AD4080_GPIO_FIFO_FULL
+      - AD4080_GPIO_FIFO_READ_DONE
+      - AD4080_GPIO_FILTER_RESULT_READY
+      - AD4080_GPIO_HT_DETECT
+      - AD4080_GPIO_LT_DETECT
+      - AD4080_GPIO_STATUS_ALERT
+      - AD4080_GPIO_GPO_DATA
+      - AD4080_GPIO_FILTER_SYNC_INPUT
+      - AD4080_GPIO_EXT_EVENT_TRIGGER_FIFO
+      - AD4080_GPIO_CNV_INHIBIT_INPUT

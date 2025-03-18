@@ -1,0 +1,28 @@
+# Copyright (c) 2025 Analog Devices Inc.
+
+description: No-os binding for adf4377 device
+
+compatible: "adi,no-os-adf4377"
+
+include: [spi-device.yaml, gpio-controller.yaml]
+
+properties:
+  dev_id:
+    type: int
+    enum:
+      - ADF4377 
+      - ADF4378 
+  spi4wire:
+    type: bool
+  clkin_freq:
+    type: uint32_t
+  f_clk:
+    type: uint64_t
+  cp_i:
+    type: uint8_t
+  muxout_select:
+    type: uint32_t
+  ref_doubler_en:
+    type: uint8_t
+  clkout_op:
+    type: uint8_t

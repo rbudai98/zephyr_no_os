@@ -1,0 +1,44 @@
+# Copyright (c) 2025 Analog Devices Inc.
+
+description: No-os binding for ade9153a device
+
+compatible: "adi,no-os-ade9153a"
+
+include: [spi-device.yaml, gpio-controller.yaml]
+
+properties:
+  spi_en:
+    type: uint8_t
+  ai_swap:
+    type: uint8_t
+  ai_pga_gain:
+    type: int
+    enum:
+      - ADE9153A_AI_GAIN_16 
+      - ADE9153A_AI_GAIN_24 
+      - ADE9153A_AI_GAIN_32 
+      - ADE9153A_AI_GAIN_38_4 
+  hpf_crn:
+    type: int
+    enum:
+      - ADE9153A_HPF_CORNER_38_695_HZ
+      - ADE9153A_HPF_CORNER_19_6375_HZ
+      - ADE9153A_HPF_CORNER_9_895_HZ
+      - ADE9153A_HPF_CORNER_4_9675_HZ
+      - ADE9153A_HPF_CORNER_2_49_HZ
+      - ADE9153A_HPF_CORNER_1_2475_HZ
+      - ADE9153A_HPF_CORNER_0_625_HZ
+      - ADE9153A_HPF_CORNER_0_3125_HZ
+  freq:
+    type: int
+    enum:
+      - F_50_HZ
+      - F_60_HZ
+  vlevel:
+    type: uint32_t
+  rsmall:
+    type: uint32_t
+  no_samples:
+    type: uint32_t
+  ai_gain:
+    type: uint32_t

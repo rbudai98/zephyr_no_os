@@ -1,0 +1,32 @@
+# Copyright (c) 2025 Analog Devices Inc.
+
+description: No-os binding for ad3552r device
+
+compatible: "adi,no-os-ad3552r"
+
+include: [spi-device.yaml, gpio-controller.yaml]
+
+properties:
+  chip_id:
+    type: int
+    enum:
+      - AD3541R_ID
+      - AD3542R_ID
+      - AD3551R_ID
+      - AD3552R_ID
+  use_external_vref:
+    type: bool
+  vref_out_enable:
+    type: bool
+  sdo_drive_strength:
+    type: uint8_t
+  crc_en:
+    type: bool
+  is_simultaneous:
+    type: bool
+  single_transfer:
+    type: bool
+  axi_qspi_controller:
+    type: bool
+  axi_clkgen_rate:
+    type: int

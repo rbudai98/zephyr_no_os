@@ -1,0 +1,9 @@
+# Copyright (c) 2025 Analog Devices Inc.
+
+description: No-os binding for adrv9025 device
+
+compatible: "adi,no-os-adrv9025"
+
+include: [spi-device.yaml]
+
+properties:

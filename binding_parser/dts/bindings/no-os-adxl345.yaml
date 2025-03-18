@@ -1,0 +1,20 @@
+# Copyright (c) 2025 Analog Devices Inc.
+
+description: No-os binding for adxl345 device
+
+compatible: "adi,no-os-adxl345"
+
+include: [spi-device.yaml, i2c-device.yaml]
+
+properties:
+  dev_type:
+    type: int
+    enum:
+      - ID_ADXL345
+      - ID_ADXL346
+  communication_type:
+    type: uint8_t
+  selected_range:
+    type: uint8_t
+  full_resolution_set:
+    type: uint8_t

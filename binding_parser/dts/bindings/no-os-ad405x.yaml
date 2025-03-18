@@ -1,0 +1,57 @@
+# Copyright (c) 2025 Analog Devices Inc.
+
+description: No-os binding for ad405x device
+
+compatible: "adi,no-os-ad405x"
+
+include: [spi-device.yaml, gpio-controller.yaml]
+
+properties:
+  active_device:
+    type: int
+    enum:
+      - ID_AD4050
+      - ID_AD4052
+  operation_mode:
+    type: int
+    enum:
+      - AD405X_CONFIG_MODE_OP
+      - AD405X_ADC_MODE_OP
+      - AD405X_AVERAGING_MODE_OP
+      - AD405X_BURST_AVERAGING_MODE_OP
+      - AD405X_PERSISTENT_AUTO_MODE_OP
+      - AD405X_NON_PERSISTENT_AUTO_MODE_OP
+  rate:
+    type: int
+    enum:
+      - AD405X_2_MSPS
+      - AD405X_1_MSPS
+      - AD405X_333_KSPS
+      - AD405X_100_KSPS
+      - AD405X_33_KSPS
+      - AD405X_10_KSPS
+      - AD405X_3_KSPS
+      - AD405X_1_KSPS
+      - AD405X_500_SPS
+      - AD405X_333_SPS
+      - AD405X_250_SPS
+      - AD405X_200_SPS
+      - AD405X_166_SPS
+      - AD405X_140_SPS
+      - AD405X_125_SPS
+      - AD405X_111_SPS
+  filter_length:
+    type: int
+    enum:
+      - AD405X_LENGTH_2
+      - AD405X_LENGTH_4
+      - AD405X_LENGTH_8
+      - AD405X_LENGTH_16
+      - AD405X_LENGTH_32
+      - AD405X_LENGTH_64
+      - AD405X_LENGTH_128
+      - AD405X_LENGTH_256
+      - AD405X_LENGTH_512
+      - AD405X_LENGTH_1024
+      - AD405X_LENGTH_2048
+      - AD405X_LENGTH_4096

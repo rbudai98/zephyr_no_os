@@ -1,0 +1,54 @@
+# Copyright (c) 2025 Analog Devices Inc.
+
+description: No-os binding for ad719x device
+
+compatible: "adi,no-os-ad719x"
+
+include: [spi-device.yaml, gpio-controller.yaml]
+
+properties:
+  current_polarity:
+    type: uint8_t
+  current_gain:
+    type: int
+    enum:
+      - AD719X_ADC_GAIN_1 
+      - AD719X_ADC_GAIN_8 
+      - AD719X_ADC_GAIN_16 
+      - AD719X_ADC_GAIN_32 
+      - AD719X_ADC_GAIN_64 
+      - AD719X_ADC_GAIN_128 
+  operating_mode:
+    type: int
+    enum:
+      - AD719X_MODE_CONT
+      - AD719X_MODE_SINGLE
+      - AD719X_MODE_IDLE
+      - AD719X_MODE_PWRDN
+      - AD719X_MODE_CAL_INT_ZERO
+      - AD719X_MODE_CAL_INT_FULL
+      - AD719X_MODE_CAL_SYS_ZERO
+      - AD719X_MODE_CAL_SYS_FULL
+  data_rate_code:
+    type: uint16_t
+  clock_source:
+    type: int
+    enum:
+      - AD719X_EXT_CRYSTAL_MCLK1_MCLK2
+      - AD719X_EXT_CRYSTAL_MCLK2
+      - AD719X_INT_CLK_4_92_MHZ_TRIST
+      - AD719X_INT_CLK_4_92_MHZ
+  input_mode:
+    type: uint8_t
+  buffer:
+    type: uint8_t
+  bpdsw_mode:
+    type: uint8_t
+  chip_id:
+    type: int
+    enum:
+      - AD7190 
+      - AD7192 
+      - AD7193 
+      - AD7194 
+      - AD7195 

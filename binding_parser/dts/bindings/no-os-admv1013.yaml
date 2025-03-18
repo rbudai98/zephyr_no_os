@@ -1,0 +1,26 @@
+# Copyright (c) 2025 Analog Devices Inc.
+
+description: No-os binding for admv1013 device
+
+compatible: "adi,no-os-admv1013"
+
+include: [spi-device.yaml]
+
+properties:
+  lo_in:
+    type: unsigned long long
+  input_mode:
+    type: int
+    enum:
+      - ADMV1013_IQ_MODE
+      - ADMV1013_IF_MODE
+  quad_se_mode:
+    type: int
+    enum:
+      - ADMV1013_SE_MODE_POS 
+      - ADMV1013_SE_MODE_NEG 
+      - ADMV1013_SE_MODE_DIFF 
+  det_en:
+    type: bool
+  vcm_uv:
+    type: unsigned int

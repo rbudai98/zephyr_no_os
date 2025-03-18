@@ -1,0 +1,11 @@
+# Copyright (c) 2025 Analog Devices Inc.
+
+description: No-os binding for max31343 device
+
+compatible: "adi,no-os-max31343"
+
+include: [i2c-device.yaml]
+
+properties:
+  battery_en:
+    type: uint8_t

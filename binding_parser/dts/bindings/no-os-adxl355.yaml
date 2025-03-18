@@ -1,0 +1,21 @@
+# Copyright (c) 2025 Analog Devices Inc.
+
+description: No-os binding for adxl355 device
+
+compatible: "adi,no-os-adxl355"
+
+
+properties:
+  comm_init:
+    type: union adxl355_comm_init_param
+  comm_type:
+    type: int
+    enum:
+      - ADXL355_SPI_COMM
+      - ADXL355_I2C_COMM
+  dev_type:
+    type: int
+    enum:
+      - ID_ADXL355
+      - ID_ADXL357
+      - ID_ADXL359

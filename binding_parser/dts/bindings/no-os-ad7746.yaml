@@ -1,0 +1,15 @@
+# Copyright (c) 2025 Analog Devices Inc.
+
+description: No-os binding for ad7746 device
+
+compatible: "adi,no-os-ad7746"
+
+include: [i2c-device.yaml]
+
+properties:
+  id:
+    type: int
+    enum:
+      - ID_AD7745
+      - ID_AD7746
+      - ID_AD7747

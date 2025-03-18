@@ -1,0 +1,15 @@
+# Copyright (c) 2025 Analog Devices Inc.
+
+description: No-os binding for max22200 device
+
+compatible: "adi,no-os-max22200"
+
+include: [spi-device.yaml, gpio-controller.yaml]
+
+properties:
+  ch_config[MAX22200_CHANNELS_CONFIG]:
+    type: int
+    enum:
+      - MAX22200_INDEPENDENT_MODE
+      - MAX22200_PARALLEL_MODE
+      - MAX22200_HALF_BRIDGE_MODE

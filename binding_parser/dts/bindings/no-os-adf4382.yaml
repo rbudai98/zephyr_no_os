@@ -1,0 +1,37 @@
+# Copyright (c) 2025 Analog Devices Inc.
+
+description: No-os binding for adf4382 device
+
+compatible: "adi,no-os-adf4382"
+
+include: [spi-device.yaml]
+
+properties:
+  spi_3wire_en:
+    type: bool
+  cmos_3v3:
+    type: bool
+  ref_freq_hz:
+    type: uint64_t
+  freq:
+    type: uint64_t
+  ref_doubler_en:
+    type: bool
+  ref_div:
+    type: uint8_t
+  cp_i:
+    type: uint8_t
+  bleed_word:
+    type: uint16_t
+  ld_count:
+    type: uint8_t
+  en_lut_gen:
+    type: uint8_t
+  en_lut_cal:
+    type: uint8_t
+  id:
+    type: int
+    enum:
+      - ID_ADF4382
+      - ID_ADF4382A
+      - ID_ADF4383

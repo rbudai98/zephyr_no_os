@@ -1,0 +1,29 @@
+# Copyright (c) 2025 Analog Devices Inc.
+
+description: No-os binding for hmc630x device
+
+compatible: "adi,no-os-hmc630x"
+
+include: [gpio-controller.yaml]
+
+properties:
+  type:
+    type: int
+    enum:
+      - HMC6300
+      - HMC6301
+  ref_clk:
+    type: int
+    enum:
+      - HMC6300_REF_CLK_71p42857MHz
+      - HMC6300_REF_CLK_75MHz
+      - HMC6300_REF_CLK_142p8571MHz
+      - HMC6300_REF_CLK_154p2857MHz
+  enabled:
+    type: bool
+  temp_en:
+    type: bool
+  vco:
+    type: uint64_t
+  if_attn:
+    type: uint8_t

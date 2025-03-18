@@ -1,0 +1,20 @@
+# Copyright (c) 2025 Analog Devices Inc.
+
+description: No-os binding for adxl38x device
+
+compatible: "adi,no-os-adxl38x"
+
+
+properties:
+  comm_init:
+    type: union adxl38x_comm_init_param
+  comm_type:
+    type: int
+    enum:
+      - ADXL38X_SPI_COMM
+      - ADXL38X_I2C_COMM
+  dev_type:
+    type: int
+    enum:
+      - ID_ADXL380
+      - ID_ADXL382

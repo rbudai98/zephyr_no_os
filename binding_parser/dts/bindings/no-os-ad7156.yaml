@@ -1,0 +1,13 @@
+# Copyright (c) 2025 Analog Devices Inc.
+
+description: No-os binding for ad7156 device
+
+compatible: "adi,no-os-ad7156"
+
+include: [i2c-device.yaml]
+
+properties:
+  ad7156_channel1_range:
+    type: float
+  ad7156_channel2_range:
+    type: float

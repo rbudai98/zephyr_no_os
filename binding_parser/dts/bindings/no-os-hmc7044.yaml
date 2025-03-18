@@ -1,0 +1,65 @@
+# Copyright (c) 2025 Analog Devices Inc.
+
+description: No-os binding for hmc7044 device
+
+compatible: "adi,no-os-hmc7044"
+
+include: [spi-device.yaml]
+
+properties:
+  export_no_os_clk:
+    type: bool
+  is_hmc7043:
+    type: bool
+  clkin_freq[4]:
+    type: uint32_t
+  clkin_freq_ccf[4]:
+    type: uint32_t
+  vcxo_freq:
+    type: uint32_t
+  pll1_pfd:
+    type: uint32_t
+  pfd1_limit:
+    type: uint32_t
+  pll1_cp_current:
+    type: uint32_t
+  pll2_freq:
+    type: uint32_t
+  pll1_loop_bw:
+    type: uint32_t
+  sysref_timer_div:
+    type: uint32_t
+  pll1_ref_prio_ctrl:
+    type: unsigned int
+  pll1_ref_autorevert_en:
+    type: bool
+  clkin0_rfsync_en:
+    type: bool
+  clkin1_vcoin_en:
+    type: bool
+  high_performance_mode_clock_dist_en:
+    type: bool
+  rf_reseeder_disable:
+    type: bool
+  hmc_two_level_tree_sync_en:
+    type: bool
+  jesd204_sysref_provider:
+    type: bool
+  jesd204_max_sysref_frequency_hz:
+    type: uint32_t
+  jesd204_desired_sysref_frequency_hz:
+    type: uint32_t
+  jdev_skip_sysref_freq_calc:
+    type: bool
+  sync_pin_mode:
+    type: unsigned int
+  pulse_gen_mode:
+    type: uint32_t
+  in_buf_mode[5]:
+    type: uint32_t
+  gpi_ctrl[4]:
+    type: uint32_t
+  gpo_ctrl[4]:
+    type: uint32_t
+  num_channels:
+    type: uint32_t

@@ -1,0 +1,19 @@
+# Copyright (c) 2025 Analog Devices Inc.
+
+description: No-os binding for ad5791 device
+
+compatible: "adi,no-os-ad5791"
+
+include: [spi-device.yaml, gpio-controller.yaml]
+
+properties:
+  act_device:
+    type: int
+    enum:
+      - ID_AD5760
+      - ID_AD5780
+      - ID_AD5781
+      - ID_AD5790
+      - ID_AD5791
+  rbuf_gain2:
+    type: bool

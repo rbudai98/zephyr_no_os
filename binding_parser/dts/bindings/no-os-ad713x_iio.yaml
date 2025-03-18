@@ -1,0 +1,12 @@
+# Copyright (c) 2025 Analog Devices Inc.
+
+description: No-os binding for ad713x_iio device
+
+compatible: "adi,no-os-ad713x_iio"
+
+
+properties:
+  vref_int:
+    type: uint32_t
+  vref_micro:
+    type: uint32_t

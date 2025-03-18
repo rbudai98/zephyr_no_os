@@ -1,0 +1,16 @@
+# Copyright (c) 2025 Analog Devices Inc.
+
+description: No-os binding for spi_engine_offload device
+
+compatible: "adi,no-os-spi_engine_offload"
+
+
+properties:
+  rx_dma_baseaddr:
+    type: uint32_t
+  tx_dma_baseaddr:
+    type: uint32_t
+  dma_flags:
+    type: uint32_t
+  offload_config:
+    type: uint8_t

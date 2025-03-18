@@ -1,0 +1,44 @@
+# Copyright (c) 2025 Analog Devices Inc.
+
+description: No-os binding for max24287 device
+
+compatible: "adi,no-os-max24287"
+
+include: [gpio-controller.yaml]
+
+properties:
+  parallel:
+    type: int
+    enum:
+      - MAX24287_TBI
+      - MAX24287_RTBI
+      - MAX24287_GMII
+      - MAX24287_RGMII
+      - MAX24287_MII
+  parspeed:
+    type: int
+    enum:
+      - MAX24287_10_HALFDUPLEX
+      - MAX24287_10_FULLDUPLEX
+      - MAX24287_100_HALFDUPLEX
+      - MAX24287_100_FULLDUPLEX
+      - MAX24287_1000_HALFDUPLEX
+      - MAX24287_1000_FULLDUPLEX
+      - MAX24287_1250_HALFDUPLEX
+      - MAX24287_1250_FULLDUPLEX
+  serial:
+    type: int
+    enum:
+      - MAX24287_SGMII
+      - MAX24287_1000BASEX
+  serspeed:
+    type: int
+    enum:
+      - MAX24287_10_HALFDUPLEX
+      - MAX24287_10_FULLDUPLEX
+      - MAX24287_100_HALFDUPLEX
+      - MAX24287_100_FULLDUPLEX
+      - MAX24287_1000_HALFDUPLEX
+      - MAX24287_1000_FULLDUPLEX
+      - MAX24287_1250_HALFDUPLEX
+      - MAX24287_1250_FULLDUPLEX

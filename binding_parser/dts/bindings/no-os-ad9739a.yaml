@@ -1,0 +1,15 @@
+# Copyright (c) 2025 Analog Devices Inc.
+
+description: No-os binding for ad9739a device
+
+compatible: "adi,no-os-ad9739a"
+
+include: [spi-device.yaml]
+
+properties:
+  common_mode_voltage_dacclk_p:
+    type: uint8_t
+  common_mode_voltage_dacclk_n:
+    type: uint8_t
+  full_scale_current:
+    type: float

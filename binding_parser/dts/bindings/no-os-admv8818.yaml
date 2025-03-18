@@ -1,0 +1,16 @@
+# Copyright (c) 2025 Analog Devices Inc.
+
+description: No-os binding for admv8818 device
+
+compatible: "adi,no-os-admv8818"
+
+include: [spi-device.yaml]
+
+properties:
+  rf_in:
+    type: unsigned long long
+  mode:
+    type: int
+    enum:
+      - ADMV8818_AUTO
+      - ADMV8818_MANUAL

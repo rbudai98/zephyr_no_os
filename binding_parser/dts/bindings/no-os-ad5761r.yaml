@@ -1,0 +1,53 @@
+# Copyright (c) 2025 Analog Devices Inc.
+
+description: No-os binding for ad5761r device
+
+compatible: "adi,no-os-ad5761r"
+
+include: [spi-device.yaml, gpio-controller.yaml]
+
+properties:
+  gpio_reset_value:
+    type: uint8_t
+  gpio_clr_value:
+    type: uint8_t
+  gpio_ldac_value:
+    type: uint8_t
+  type:
+    type: int
+    enum:
+      - AD5761R
+      - AD5721R
+  out_range:
+    type: int
+    enum:
+      - AD5761R_RANGE_M_10V_TO_P_10V
+      - AD5761R_RANGE_0_V_TO_P_10V
+      - AD5761R_RANGE_M_5V_TO_P_5V
+      - AD5761R_RANGE_0V_TO_P_5V
+      - AD5761R_RANGE_M_2V5_TO_P_7V5
+      - AD5761R_RANGE_M_3V_TO_P_3V
+      - AD5761R_RANGE_0V_TO_P_16V
+      - AD5761R_RANGE_0V_TO_P_20V
+  pwr_voltage:
+    type: int
+    enum:
+      - AD5761R_SCALE_ZERO
+      - AD5761R_SCALE_HALF
+      - AD5761R_SCALE_FULL
+  clr_voltage:
+    type: int
+    enum:
+      - AD5761R_SCALE_ZERO
+      - AD5761R_SCALE_HALF
+      - AD5761R_SCALE_FULL
+  int_ref_en:
+    type: bool
+  exc_temp_sd_en:
+    type: bool
+  b2c_range_en:
+    type: bool
+  ovr_en:
+    type: bool
+  daisy_chain_en:
+    type: bool

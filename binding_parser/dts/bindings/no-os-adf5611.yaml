@@ -1,0 +1,32 @@
+# Copyright (c) 2025 Analog Devices Inc.
+
+description: No-os binding for adf5611 device
+
+compatible: "adi,no-os-adf5611"
+
+include: [spi-device.yaml]
+
+properties:
+  spi4wire:
+    type: bool
+  cmos_3v3:
+    type: bool
+  ref_clk_freq:
+    type: uint64_t
+  rfout_freq:
+    type: uint64_t
+  ref_div:
+    type: uint8_t
+  cp_i:
+    type: uint8_t
+  bleed_word:
+    type: uint16_t
+  ld_count:
+    type: uint8_t
+  rfoutdiv_div:
+    type: uint8_t
+  id:
+    type: int
+    enum:
+      - ID_ADF5611
+      - ID_ADF5612

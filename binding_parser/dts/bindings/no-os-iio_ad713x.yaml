@@ -1,0 +1,10 @@
+# Copyright (c) 2025 Analog Devices Inc.
+
+description: No-os binding for iio_ad713x device
+
+compatible: "adi,no-os-iio_ad713x"
+
+
+properties:
+  num_channels:
+    type: uint8_t

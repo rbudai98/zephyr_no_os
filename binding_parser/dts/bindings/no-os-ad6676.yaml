@@ -1,0 +1,51 @@
+# Copyright (c) 2025 Analog Devices Inc.
+
+description: No-os binding for ad6676 device
+
+compatible: "adi,no-os-ad6676"
+
+include: [spi-device.yaml]
+
+properties:
+  ref_clk:
+    type: uint32_t
+  f_adc_hz:
+    type: uint32_t
+  f_if_hz:
+    type: uint32_t
+  bw_hz:
+    type: uint32_t
+  bw_margin_low_mhz:
+    type: uint8_t
+  bw_margin_high_mhz:
+    type: uint8_t
+  bw_margin_if_mhz:
+    type: int8_t
+  decimation:
+    type: uint8_t
+  ext_l:
+    type: uint8_t
+  attenuation:
+    type: uint8_t
+  scale:
+    type: uint8_t
+  use_extclk:
+    type: uint8_t
+  spi3wire:
+    type: uint8_t
+  shuffle_ctrl:
+    type: uint8_t
+  shuffle_thresh:
+    type: uint8_t
+  scrambling_en:
+    type: uint8_t
+  lvds_syncb:
+    type: uint8_t
+  sysref_pd:
+    type: uint8_t
+  n_lanes:
+    type: uint8_t
+  frames_per_multiframe:
+    type: uint8_t
+  m:
+    type: uint64_t

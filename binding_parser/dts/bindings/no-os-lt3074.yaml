@@ -1,0 +1,11 @@
+# Copyright (c) 2025 Analog Devices Inc.
+
+description: No-os binding for lt3074 device
+
+compatible: "adi,no-os-lt3074"
+
+include: [i2c-device.yaml, gpio-controller.yaml]
+
+properties:
+  crc_en:
+    type: bool

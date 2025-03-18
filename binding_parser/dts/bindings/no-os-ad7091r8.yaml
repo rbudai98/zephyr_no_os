@@ -1,0 +1,24 @@
+# Copyright (c) 2025 Analog Devices Inc.
+
+description: No-os binding for ad7091r8 device
+
+compatible: "adi,no-os-ad7091r8"
+
+include: [spi-device.yaml, gpio-controller.yaml]
+
+properties:
+  vref_mv:
+    type: int
+  device_id:
+    type: int
+    enum:
+      - AD7091R2
+      - AD7091R4
+      - AD7091R8
+  sleep_mode:
+    type: int
+    enum:
+      - AD7091R8_SLEEP_MODE_0
+      - AD7091R8_SLEEP_MODE_1
+      - AD7091R8_SLEEP_MODE_2
+      - AD7091R8_SLEEP_MODE_3
